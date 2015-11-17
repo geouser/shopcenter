@@ -8,21 +8,130 @@
 <link rel="stylesheet" type="text/css" href="css/shopcenter.css">
 <link rel="stylesheet" type="text/css" href="css/anythingslider.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
+<link rel="stylesheet" type="text/css" href="js/slick/slick.css">
 <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/jquery.anythingslider.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/base.js"></script>
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
 <script type="text/javascript" src="js/jquery.countdown-ru.js"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
 		$('#slider').anythingSlider();
-		$('#slider1').anythingSlider();
+		$('#slider1').slick({
+			  adaptiveHeight: true,
+		      autoplay: false,
+		      autoplaySpeed: 12000,
+		      arrows: true,
+		      dots: false,
+		      fade: false,
+		      infinite: true,
+		      initialSlide: 1,
+		      pauseOnHover: true,
+		      slidesToShow: 7,
+		      slidesToScroll: 2,
+		      slide: '.itempartner',
+		      speed: 1000,
+		      touchMove: true,
+		      useCSS: true,
+		      responsive: [
+		        {
+		          breakpoint: 1024,
+		          settings: {
+		            slidesToShow: 6,
+		            slidesToScroll: 3,
+		          }
+		        },
+		        {
+		          breakpoint: 900,
+		          settings: {
+		            slidesToShow: 5,
+		            slidesToScroll: 3
+		          }
+		        },
+		        {
+		          breakpoint: 650,
+		          settings: {
+		            slidesToShow: 4,
+		            slidesToScroll: 2
+		          }
+		        },
+		        {
+		          breakpoint: 510,
+		          settings: {
+		            slidesToShow: 3,
+		            slidesToScroll: 3
+		          }
+		        },
+		        {
+		          breakpoint: 380,
+		          settings: {
+		            slidesToShow: 2,
+		            slidesToScroll: 2
+		          }
+		        }
+		        // You can unslick at a given breakpoint now by adding:
+		        // settings: "unslick"
+		        // instead of a settings object
+		      ]
+		});
+
 		$('#slideimage').anythingSlider({
 			buildNavigation     : true,
 			buildArrows         : false,
 			autoPlay            : true
 		});
-		$('#bestproduct').anythingSlider();
+		$('#bestproduct').slick({
+			adaptiveHeight: false,
+		    autoplay: false,
+		    autoplaySpeed: 12000,
+		    arrows: true,
+		    dots: false,
+		    fade: false,
+		    infinite: true,
+		    initialSlide: 1,
+		    pauseOnHover: true,
+		    slidesToShow: 5,
+		    slidesToScroll: 2,
+		    slide: '.clumn-best',
+		    speed: 1000,
+		    touchMove: true,
+		    useCSS: true,
+		    responsive: [
+		        {
+		          breakpoint: 1024,
+		          settings: {
+		            slidesToShow: 5,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 800,
+		          settings: {
+		            slidesToShow: 4,
+		            slidesToScroll: 2
+		          }
+		        },
+		        {
+		          breakpoint: 650,
+		          settings: {
+		            slidesToShow: 3,
+		            slidesToScroll: 1
+		          }
+		        },
+		        {
+		          breakpoint: 500,
+		          settings: {
+		            slidesToShow: 2,
+		            slidesToScroll: 2,
+		            adaptiveHeight: true
+		          }
+		        }
+		        // You can unslick at a given breakpoint now by adding:
+		        // settings: "unslick"
+		        // instead of a settings object
+		      ]
+		});
 	})
 </script>
 <script type="text/javascript">
@@ -791,86 +900,60 @@ $(function () {
         <div id="bestprice">
         	<h3>Выгодные предложения</h3>
             <ul id="bestproduct">
-            	<li>
-                	<div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
+            	<li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
                 </li>
-                <li>
-                	<div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
                 </li>
-                <li>
-                	<div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
-                    <div class="clumn-best">
-                    	<div class="discount"><i class="icons i-after"></i> 30%</div>
-                    	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                        <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                    </div>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                </li>
+                <li class="clumn-best">
+                	<div class="discount"><i class="icons i-after"></i> 30%</div>
+                	<a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                    <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
                 </li>
             </ul>
         </div>
@@ -925,95 +1008,53 @@ $(function () {
         <div id="partner">
             <span class="title">Партнеры</span>
             <ul id="slider1">
-                <li>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn1.jpg" alt=""></a>
-                        <p><a href="#">ТТП РФ</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn2.jpg" alt=""></a>
-                        <p><a href="#">Московская ТТП</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn3.jpg" alt=""></a>
-                        <p><a href="#">Гильдия российских адвокатов</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn4.jpg" alt=""></a>
-                        <p><a href="#">ТПП Татарстана</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn5.jpg" alt=""></a>
-                        <p><a href="#">Белорусская ТТП</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn6.jpg" alt=""></a>
-                        <p><a href="#">ТТП Узбекистана</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn7.jpg" alt=""></a>
-                        <p><a href="#">Фундация Адвокатов Украины</a></p>
-                    </div>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn1.jpg" alt=""></a>
+                    <p><a href="#">ТТП РФ</a></p>
                 </li>
-                <li>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn1.jpg" alt=""></a>
-                        <p><a href="#">ТТП РФ</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn2.jpg" alt=""></a>
-                        <p><a href="#">Московская ТТП</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn3.jpg" alt=""></a>
-                        <p><a href="#">Гильдия российских адвокатов</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn4.jpg" alt=""></a>
-                        <p><a href="#">ТПП Татарстана</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn5.jpg" alt=""></a>
-                        <p><a href="#">Белорусская ТТП</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn6.jpg" alt=""></a>
-                        <p><a href="#">ТТП Узбекистана</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn7.jpg" alt=""></a>
-                        <p><a href="#">Фундация Адвокатов Украины</a></p>
-                    </div>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn2.jpg" alt=""></a>
+                    <p><a href="#">Московская ТТП</a></p>
                 </li>
-                <li>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn1.jpg" alt=""></a>
-                        <p><a href="#">ТТП РФ</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn2.jpg" alt=""></a>
-                        <p><a href="#">Московская ТТП</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn3.jpg" alt=""></a>
-                        <p><a href="#">Гильдия российских адвокатов</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn4.jpg" alt=""></a>
-                        <p><a href="#">ТПП Татарстана</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn5.jpg" alt=""></a>
-                        <p><a href="#">Белорусская ТТП</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn6.jpg" alt=""></a>
-                        <p><a href="#">ТТП Узбекистана</a></p>
-                    </div>
-                    <div class="itempartner">
-                        <a href="#"><img src="images/products/pn7.jpg" alt=""></a>
-                        <p><a href="#">Фундация Адвокатов Украины</a></p>
-                    </div>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn3.jpg" alt=""></a>
+                    <p><a href="#">Гильдия российских адвокатов</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn4.jpg" alt=""></a>
+                    <p><a href="#">ТПП Татарстана</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn5.jpg" alt=""></a>
+                    <p><a href="#">Белорусская ТТП</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn6.jpg" alt=""></a>
+                    <p><a href="#">ТТП Узбекистана</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn7.jpg" alt=""></a>
+                    <p><a href="#">Фундация Адвокатов Украины</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn3.jpg" alt=""></a>
+                    <p><a href="#">Гильдия российских адвокатов</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn4.jpg" alt=""></a>
+                    <p><a href="#">ТПП Татарстана</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn5.jpg" alt=""></a>
+                    <p><a href="#">Белорусская ТТП</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn6.jpg" alt=""></a>
+                    <p><a href="#">ТТП Узбекистана</a></p>
+                </li>
+                <li class="itempartner">
+                    <a href="#"><img src="images/products/pn7.jpg" alt=""></a>
+                    <p><a href="#">Фундация Адвокатов Украины</a></p>
                 </li>
             </ul>
         </div>

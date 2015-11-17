@@ -125,25 +125,36 @@
 	display: block;
 }
 
-.anythingSlider-default .arrow a {
+.anythingSlider-default .arrow a,
+.slick-arrow {
 	display: block;
 	width: 44px;
 	height: 44px;
+	color: transparent;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	position: absolute;
 	text-align: center;
+	z-index: 10;
 	outline: 0;
 	background: url(../images/slider-arrow.png) no-repeat;
 }
 
 /* back arrow */
 .anythingSlider-default .back { right: 48px; }
-.anythingSlider-default .back a { background-position: 0px -44px; }
+.anythingSlider-default .back a,
+.slick-prev 					 { background-position: 0px -44px; cursor: pointer;}
 .anythingSlider-default .back a:hover,
-.anythingSlider-default .back a.hover { background-position: -44px -44px; }
+.anythingSlider-default .back a.hover,
+.slick-prev:hover 				 { background-position: -44px -44px; }
 /* forward arrow */
 .anythingSlider-default .forward { right: 0; }
-.anythingSlider-default .forward a { background-position: 0px 0px; }
+.anythingSlider-default .forward a,
+.slick-next 					 { background-position: 0px 0px; }
 .anythingSlider-default .forward a:hover,
-.anythingSlider-default .forward a.hover { background-position: -44px 0px; }
+.anythingSlider-default .forward a.hover,
+.slick-next:hover 				 { background-position: -44px 0px; }
 
 /* Navigation Links */
 .anythingSlider-default .anythingControls { 
@@ -318,7 +329,7 @@ height: 15px; /* limit height, needed for IE9 of all things */
 #slider1 li .itemspp{ position:relative; float:left; width:80px!important; margin:0 30px 0 0; display:inline; font-size: 11px; color: #999;}
 #slider1 li .itemspp .thumb{ position: relative; float: left; width: 100%;}
 #slider1 li .itemspp .infopeople{ position: relative; float: left; width: 100%;}
-#slider1 li a { padding: 0 6px 0 0;}
+#slider1 li a { padding: 0; display: inline-block;}
 #slider1 li .itemspp p{ padding: 5px 0 0 0;}
 #slider1 li .itemspp:nth-child(7n),#slider1 li .itemspp:first-child + li + li + li + li + li + li{ margin: 0;}
 .salepeople .anythingSlider-default .back{ left: 165px!important; }
@@ -417,23 +428,51 @@ border-width: 0 8px 8px 0;
 border-color: transparent #954332 transparent transparent;}
 #slide-var .anythingSlider-default .anythingControls ul a{width:15px; height:15px; background-color:#FFF; border-radius:8px; box-shadow:1px 4px 0px #be4b35;}
 #slide-var .anythingSlider-default .anythingControls ul a.cur{ background-color:#383838; box-shadow:0px 4px 0px #010101 inset;}
-#bestproduct{width: 980px; height: 260px; list-style: none; overflow-y: auto; overflow-x: hidden;}
-#bestprice .anythingSlider-default .back{ left: 40%!important; top:-60px;}
-#bestprice .anythingSlider-default .forward{ left: 45%!important; top:-60px;}
-#bestproduct li{ background-color:#EEE; padding:30px 0px;}
-#bestproduct li .clumn-best{ position:relative; float:left; width:180px!important; height:200px!important; margin-left:13px; display:inline; background-color:#383838;}
-#bestproduct li .clumn-best .thumb{ position:relative; float:left; width:100%;}
-#bestproduct li .clumn-best .discount{ z-index:999999;}
-#bestproduct li .clumn-best .name{ position:relative; float:left; padding:5px; font-size:14px; color:#FFF; text-align:center;}
+#bestproduct{width: 980px; height: 230px; list-style: none; overflow-y: inherit; background-color: #EEE; text-align: center;}
+#bestprice .anythingSlider-default .back,
+#bestprice .slick-prev						{ left: 40%!important; top:-60px;}
+#bestprice .anythingSlider-default .forward,
+#bestprice .slick-next 						{ left: 45%!important; top:-60px;}
+#bestproduct li{ padding:0;}
+#bestproduct li.clumn-best{ position:relative; width:180px; height:200px; margin: 15px 5px 0; display:inline-block; background-color:#383838;}
+#bestproduct li.clumn-best .thumb{ position:relative; float:left; width:100%;}
+#bestproduct li.clumn-best .discount{ z-index:999999;}
+#bestproduct li.clumn-best .name{ position:relative; float:left; padding:5px; font-size:14px; color:#FFF; text-align:center;}
+@media (max-width: 1024px) {
+	#bestproduct 				{ width: 100%;}
+	#bestprice .anythingSlider-default .back,
+	#bestprice .slick-prev						{ left: auto!important; top:-60px; right: 50px}
+	#bestprice .anythingSlider-default .forward,
+	#bestprice .slick-next 						{ left: auto!important; top:-60px; right: 0;}
+}
+@media (max-width: 500px) {
+		#bestprice .anythingSlider-default .back,
+		#bestprice .slick-prev						{ left: 0!important; top:-60px; right: auto;}
+		#bestprice .anythingSlider-default .forward,
+		#bestprice .slick-next 						{ left: 50px!important; top:-60px; right: auto;}
+		#bestproduct li.clumn-best 					{ height: auto;}
+		#bestproduct 								{ height: auto; padding-bottom: 15px;}
+}
+
+
+
+
 #partner .title{font-size: 30px; font-weight: 300;}
-#partner #slider1{ width: 980px; height: 182px;}
-#partner #slider1 li{ padding:0;}
-#slider1 li .itempartner{ position: relative; float: left; width:100px!important; height: 155px!important; padding:15px; background-color: #FFF; text-align:center; margin:20px 10px 0 0; display:inline;}
-#slider1 li .itempartner p{ padding-top:5px;}
-#slider1 li .itempartner:hover{ background:#383838;}
-#slider1 li .itempartner:hover a{ color:#FFF; text-decoration:none;} 
-#partner .anythingSlider-default .back{ left: 165px!important; }
-#partner .anythingSlider-default .forward{ left: 215px!important;}
+#partner #slider1{ width: 100%; position: relative; overflow: inherit;}
+#partner #slider1 li{ display: inline-block; vertical-align: top;}
+#slider1 li.itempartner{ position: relative; float: none; width:100px; min-height: 155px!; padding:15px; background-color: #FFF; text-align:center; margin:20px 10px 0 0; display:inline-block;}
+#slider1 li.itempartner p{ padding-top:5px;}
+#slider1 li.itempartner:hover{ background:#383838;}
+#slider1 li.itempartner:hover a{ color:#FFF; text-decoration:none;} 
+#partner .slick-prev{ left: 165px!important; top: -40px;}
+#partner .slick-next{ left: 215px!important; top: -40px;}
+@media (max-width: 1024px) {
+	#slider1 li.itempartner 			{ min-height: 155px; margin-top: 0; float: none; margin-bottom: 0; display: inline-block; vertical-align: top; box-sizing: border-box; padding-left: 5px; padding-right: 5px;}
+	#partner #slider1 					{ width: 100%; text-align: center;}
+	#partner #slider1 .panel 			{ text-align: center;}
+}
+
+
 
 #bestprice-cpn #bestproduct{width: 740px;}
 #bestprice-cpn #bestproduct li .clumn-best{ margin-left:4px;}
