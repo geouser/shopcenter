@@ -18,14 +18,19 @@ body {
     background: url(../images/icons.png);
 }
 .imgshop {
-    background: url(../images/imgshop.png);
+    background: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 100%;
+         -o-background-size: 100%;
+            background-size: 100%;
 }
 #mainpage {
     min-width: 1024px;
     min-height: 100%;
 }
 #top {
-    width: 100%;
+    width: 100vw;
     height: 40px;
     background-color: #383838;
     line-height: 40px;
@@ -80,7 +85,6 @@ body {
     width: 283px;
     height: 80px;
     text-indent: -9999px;
-    background-position: 0px 0px;
 }
 #sl-lang {
     position: absolute;
@@ -110,6 +114,36 @@ body {
     background-position: 0px -228px;
     top: 6px;
 }
+
+		@media (max-width: 1024px) {
+			#header    {padding: 10px 0;}
+			#logo      {width: 250px;}
+		}
+		@media (max-width: 840px) {
+			#top        {height: 33px; line-height: 33px;}
+			#top span i {margin-top: 7px;}
+			#logo       {width: 220px;}
+			#sl-lang    {left: 160px;}
+		}
+		@media (max-width: 650px) {
+			#header     {padding: 5px 0 2px 0;}
+			.head-l     {float: none; display: inline-block; vertical-align: middle; width: 49%;}
+			#logo       {width: 95%;}
+			#sl-lang    {left: 67%;}
+			#top span:nth-child(3) {display: none;}
+		}
+		@media (max-width: 420px) {
+			#top span   {margin: 0 5px 0 0;}
+			#top span:last-child {margin-right: 0;}
+			#header     {padding: 15px 0 2px 0;}
+			#sl-lang    {left: 0; top: -8px;}
+			.head-l     {width: 55%;}
+		}
+		@media (max-width: 330px) {
+			#top span   {font-size: 11px;}
+		}
+
+
 .regacc {
     position: relative;
     float: left;
@@ -137,6 +171,33 @@ body {
     background-color: #ff5f40;
     transition-duration: 1s;
 }
+        @media (max-width: 1024px) {
+			.regacc  {margin: 0 0 0 50px;}
+		}
+
+		@media (max-width: 840px) {
+			.regacc  {font-size: 12px; margin-left: 3%; width: 240px;}
+			.btnreg  {padding: 6px 10px;}
+		}
+		@media (max-width: 750px) {
+			.btnreg  {display: block; margin: 2px 0 0 0;}
+			.regacc  {margin-left: 7%; width: 160px;}
+			.regacc p {line-height: normal;}
+		}
+		@media (max-width: 680px) {
+			.regacc  {margin-left: 2%; width: 140px;}
+		}
+		@media (max-width: 650px) {
+			.regacc  {margin: 5px 0; width: 100%;}
+			.btnreg  {display: inline-block; width: 44%; margin: 2px 1% 0 0;}
+			.btnreg:nth-child(3) {margin-right: 0;}
+			.regacc p {text-align: left; padding-left: 2%;}
+		}
+		@media (max-width: 420px) {
+			.btnreg  {width: 42%;}
+		}
+
+
 .cart {
     position: relative;
     float: right;
@@ -146,7 +207,7 @@ body {
     float: left;
     width: 48px;
     height: 43px;
-    background-position: -288px 0px;
+    background-image: url(../images/basket.png);
     margin: 2px 15px 0 0;
     display: inline;
 }
@@ -173,6 +234,19 @@ body {
     height: 54px;
     background-color: #e85c41;
 }
+
+		@media (max-width: 650px) {
+			.cart     {float: none; display: inline-block; width: 49%; text-align: right; vertical-align: middle;}
+			.cartitem {float: right;}
+			.icart    {float: right; margin: 0 0 0 7px;}
+		}
+		@media (max-width: 420px) {
+			.cart       {width: 44%;}
+			.viewcart   {margin-top: 7px;}
+			.viewcart a {font-size: 13px; padding-right: 16px;}
+			.icart      {width: 38px; height: 33px;}
+		}
+
 .bginput {
     position: relative;
     float: left;
@@ -196,7 +270,7 @@ body {
     color: #999999;
     height: 34px;
     line-height: 34px;
-    width: 55%;
+    width: auto;
     border: 0;
     margin-left: 45px;
     display: inline;
@@ -218,6 +292,23 @@ body {
     color: #FFF;
     text-decoration: none;
 }
+
+		@media (max-width: 1024px) {
+			.bginput   {width: 81%;}
+			.btns      {margin: 9px 10px 0 10px; float: right; width: 6.5%; 
+			}
+		}
+		@media (max-width: 680px) {
+			.bginput   {width: 80%;}
+		}
+		@media (max-width: 600px) {
+			#homesearch          {height: auto; padding: 2%; width: 96%;}
+			.bginput             {text-align: center; height: auto; margin: 0; width: 100%; overflow: hidden;}
+			.bginput input.text  {width: 90%;}
+			.btns                {margin: 7px 0 0 0; width: auto;}
+		}
+
+
 #flag {
     position: relative;
     float: left;
@@ -262,6 +353,14 @@ body {
 .flag6 {
     background-position: 0px -100px;
 }
+
+
+
+      	@media (max-width: 840px) {
+      		.iflag   {float: left;}
+		}
+
+
 #main {
     position: relative;
     float: left;
@@ -985,11 +1084,34 @@ body {
     margin: 0 0 0 1px;
 }
 .bginput .styled-select select {
-    width: 180px;
+    width: 100%;
     padding: 8px 0 7px 5px;
     height: 38px;
     font-size: 12px;
 }
+
+			@media (max-width: 650px) {
+				.bginput .styled-select  {background: rgba(216, 216, 216, 0.5); width: 140px;
+				                         background-image: url(../images/arrowDown.png);
+				                         background-position: 94% 57%;
+				                         background-repeat: no-repeat;
+				                         -webkit-background-size: 7%;
+				                              -o-background-size: 7%;
+				                                 background-size: 7%;
+				                         }
+				.bginput .styled-select select {font-size: 11px;}
+			}
+			@media (max-width: 680px) {
+				.bginput .styled-select  {width: 136px;}
+			}
+			@media (max-width: 600px) {
+				.bginput .styled-select  {width: 49%; display: inline-block; float: none;
+				                         }
+				.bginput .styled-select select {padding-left: 5px; font-size: 14px;}
+			}
+
+
+
 .salepopup {
     position: absolute;
     width: 300px;
@@ -1146,6 +1268,13 @@ body {
     color: #FFF;
     text-decoration: none;
 }
+
+@media (max-width: 330px) {
+			.languagetop   {width: 285px;}
+			#localmenu div.col1 {width: 130px;}
+		}
+
+
 .cartmini {
     position: absolute;
     background-color: #FFF;
@@ -1646,7 +1775,6 @@ span.lesssort a.pricefilter {
 }
 .imgout {
     position: relative;
-    : relative;
     height: 320px;
     width: 320px;
 }
@@ -3312,6 +3440,15 @@ img#pic {
     font-size: 13px;
     font-weight: 300;
 }
+
+		@media (max-width: 840px) {
+			#flag-var          {text-align: center;}
+			#flag-var ul       {width: auto; float: none; display: inline-block;}
+			#flag-var ul li    {width: 110px; margin: 3px 0 0 10px;}
+			#flag-var ul li a  {font-size: 12px;}
+		}
+
+
 #vartop {
     position: relative;
     float: left;
