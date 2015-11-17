@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shopcenter - Coupon</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700,400&subset=latin,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/shopcenter.css">
+<link rel="stylesheet" type="text/css" href="css/anythingslider.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.anythingslider.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script type="text/javascript" src="js/jquery.countdown-ru.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#slider').anythingSlider();
+		$('#slider1').anythingSlider();
+	})
+</script>
+<script type="text/javascript">
+$(function () {
+	var austDay = new Date();
+	austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+	$('#topCountdown').countdown({until: 60000});
+});
+$(function () {
+	var austDay = new Date();
+	austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+	$('#compactLayout').countdown({until: 60000, compact: true, 
+    layout: '{hnn}{sep}{mnn}{sep}{snn} {desc}'});
+});
+</script>
+<!--[if IE]><link type="text/css" rel="stylesheet" href="css/ie.css" /><![endif]-->
+</head>
+
+<body>
+<div id="mainpage">
+	<div id="top">
+		<div class="container">
+			<span><a href="#">Главная</a></span>
+			<span><i class="icons i-questinon"></i><a href="#">Задать вопрос</a></span>
+			<span><i class="icons i-customer"></i><a href="#">Защита потребителя</a></span>
+			<span class="reg"><i class="icons i-reg"></i><a href="#">Войти на сайт</a></span>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div id="header">
+		<div class="head-l">
+			<a href="#" class="imgshop" id="logo">Центр покупок</a>
+			<div id="sl-lang">
+				<div id="linklang">
+					Израиль, Иерусалим
+					<i class="icons arrow-lang"></i>
+				</div>
+				<div class="languagetop">
+					<ul id="localmenu">
+						<li class="level1-li sub"><a class="level1-a" href="#url">Иерусалим<!--[if gte IE 7]><!--></a><!--<![endif]-->
+						<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<div class="listHolder col1">
+								<div class="listCol">
+									<ul>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+									</ul>
+								</div>	
+							</div>
+						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+						<li class="level1-li sub"><a class="level1-a" href="#url">Иерусалим<!--[if gte IE 7]><!--></a><!--<![endif]-->
+						<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<div class="listHolder col1">
+								<div class="listCol">
+									<ul>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+									</ul>
+								</div>	
+							</div>
+						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+						<li class="level1-li sub"><a class="level1-a" href="#url">Иерусалим<!--[if gte IE 7]><!--></a><!--<![endif]-->
+						<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<div class="listHolder col1">
+								<div class="listCol">
+									<ul>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+									</ul>
+								</div>	
+							</div>
+						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+						<li class="level1-li sub"><a class="level1-a" href="#url">Иерусалим<!--[if gte IE 7]><!--></a><!--<![endif]-->
+						<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<div class="listHolder col1">
+								<div class="listCol">
+									<ul>
+										<li><a href="#url">Израиль</a></li>
+										<li><a href="#url">Израиль</a></li>
+									</ul>
+								</div>	
+							</div>
+						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="regacc">
+			<p>Зарегистрируйтесь прямо сейчас</p>
+			<a href="#" class="btnreg">Я — продавец</a>
+			<a href="#" class="btnreg">Я — покупатель</a>
+		</div>
+		<div class="cart">
+			<div class="clearfix">
+				<i class="icart imgshop"></i>
+				<div class="cartitem">
+					<p><a href="#" id="linkcart">3 товара</a></p>
+					<p>на  <strong>$ 320.60</strong></p>
+					<div class="cartmini">
+						<ul>
+							<li>
+								<img src="images/products/thumb.jpg" alt="" class="thumb">
+								<div class="descart">
+									<a href="#">Сумка мужская коричневая в стиле хайтек, кожезаменитель</a>
+									<p>x 1 <font class="number">$3.80</font></p>
+									<a href="#" class="icons i-delete">Delete</a>
+								</div>
+							</li>
+							<li>
+								<img src="images/products/thumb.jpg" alt="" class="thumb">
+								<div class="descart">
+									<a href="#">Сумка мужская коричневая в стиле хайтек, кожезаменитель</a>
+									<p>x 1 <font class="number">$3.80</font></p>
+									<a href="#" class="icons i-delete">Delete</a>
+								</div>
+							</li>
+							<li>
+								<img src="images/products/thumb.jpg" alt="" class="thumb">
+								<div class="descart">
+									<a href="#">Сумка мужская коричневая в стиле хайтек, кожезаменитель</a>
+									<p>x 1 <font class="number">$3.80</font></p>
+									<a href="#" class="icons i-delete">Delete</a>
+								</div>
+							</li>
+							<li class="total">
+								<div>
+									<label class="left">Общая сумма:</label>
+									<label class="right">$ 220.03</label>
+								</div>
+								<div>
+									<label class="left">Стоимость доставки:</label>
+									<label class="right">бесплатная</label>
+								</div>
+								<div class="price">
+									<label class="left">Всего:</label>
+									<label class="right">$ 220.03</label>
+								</div>
+								<div><a class="btnreg" href="#">Оформить заказ</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="viewcart"><a href="#">Оформить заказ</a></div>
+		</div>
+	</div>
+	<div id="homesearch">
+		<div class="bginput">
+			<i class="icon-search imgshop"></i>
+			<input type="text" name="" placeholder="Поиск товара" class="text" />
+			<div class="styled-select">
+                <select name="select">
+                  <option value="1">Выбрать категорию</option>
+                  <option value="2">Выбрать категорию</option>
+                </select>
+          	</div>
+          	<div class="styled-select">
+                <select name="select">
+                  <option value="1">Выбрать регион</option>
+                  <option value="2">Выбрать регион</option>
+                </select>
+          	</div>
+		</div>
+		<a href="#" class="btns">Поиск</a>
+	</div>
+	<div id="flag">
+		<ul>
+			<li class="active"><i class="iflag flag1"></i></li>
+			<li><i class="iflag flag2"></i></li>
+			<li><i class="iflag flag3"></i></li>
+			<li><i class="iflag flag4"></i></li>
+			<li><i class="iflag flag5"></i></li>
+			<li><i class="iflag flag6"></i></li>
+			<li><i class="iflag flag1"></i></li>
+			<li><i class="iflag flag2"></i></li>
+			<li><i class="iflag flag3"></i></li>
+			<li><i class="iflag flag4"></i></li>
+			<li><i class="iflag flag5"></i></li>
+			<li><i class="iflag flag6"></i></li>
+			<li><i class="iflag flag1"></i></li>
+			<li><i class="iflag flag2"></i></li>
+			<li><i class="iflag flag3"></i></li>
+			<li><i class="iflag flag4"></i></li>
+			<li><i class="iflag flag5"></i></li>
+			<li><i class="iflag flag6"></i></li>
+			<li><i class="iflag flag1"></i></li>
+			<li><i class="iflag flag2"></i></li>
+			<li><i class="iflag flag3"></i></li>
+			<li><i class="iflag flag4"></i></li>
+			<li><i class="iflag flag5"></i></li>
+			<li><i class="iflag flag6"></i></li>
+			<li><i class="iflag flag2"></i></li>
+			<li><i class="iflag flag3"></i></li>
+			<li><i class="iflag flag4"></i></li>
+			<li><i class="iflag flag5"></i></li>
+		</ul>
+	</div>
+	<div id="main">
+		<div id="sidebar">
+			<h3>Related Categories</h3>
+			<ul id="categories">
+				<li class="parent">Men</li>
+				<li><a href="#">Accessories </a>(165510)</li>
+				<li><a href="#">Coats &amp; Jackets </a>(165510)</li>
+				<li><a href="#">Hoodies &amp; Sweatshirts </a>(165510)</li>
+				<li><a href="#">Jeans </a>(165510)</li>
+				<li><a href="#">Pants </a>(165510)</li>
+				<li><a href="#">Shirts </a>(165510)</li>
+				<li><a href="#">Shorts </a>(165510)</li>
+				<li><a href="#">Sleep &amp; Lounge </a>(165510)</li>
+				<li><a href="#">Socks </a>(165510)</li>
+				<li><a href="#">Suits &amp; Blazers </a>(165510)</li>
+				<li><a href="#">Sweaters </a>(165510)</li>
+				<li><a href="#">Swimwear </a>(165510)</li>
+				<li><a href="#">Tops &amp; Tees </a>(165510)</li>
+				<li><a href="#">Underwear </a>(165510)</li>
+			</ul>
+			<div class="bestbuy">
+				<div class="items-coupon">
+					<h3>Самые выгодные купоны</h3>
+					<ul>
+						<li>
+							<div class="discount"><i class="icons i-after"></i> -30%</div>
+							<a href="#"><img alt="" src="images/products/pr4.jpg"></a>
+							<div class="coupon-info">
+								<p><a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a></p>
+								<p class="price">
+									<font class="number">$ 53.80 </font><font class="dv">/ пара</font>
+									Экономия: $ 22.10
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="discount"><i class="icons i-after"></i> -30%</div>
+							<a href="#"><img alt="" src="images/products/pr4.jpg"></a>
+							<div class="coupon-info">
+								<p><a href="#">5, 10 или 15 посещений подземного соляного грота</a></p>
+								<p class="price">
+									<font class="number">$ 53.80 </font><font class="dv">/ пара</font>
+									Экономия: $ 22.10
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="title-filter">
+				Вы смотрели
+			</div>
+			<div id="gallery">
+				<ul id="slider">
+					<li>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl3.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl4.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl3.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl4.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+					</li>
+					<li>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl3.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl4.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl3.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl4.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+					</li>
+					<li>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl3.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl4.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl3.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl4.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -80%</div>
+							<a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a>
+						</div>
+						<div class="items">
+							<div class="discount"><i class="icons i-after"></i> -35%</div>
+							<a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="main-r">
+			<div class="breadcrumbs">
+				<div xmlns="http://rdf.data-vocabulary.org/#">
+					<span typeof="v:Breadcrum"><a property="v:title" rel="v:url" href="#">Главная</a> &rarr;</span>
+					<span typeof="v:Breadcrum"><a href="#" property="v:title" rel="v:url">Купоны</a> &rarr;</span>
+					<span typeof="v:Breadcrum"><a property="v:title" rel="v:url" href="#">Для мужчин</a></span>
+				</div>
+			</div>
+			<div class="title-items">
+				Купоны  <i>/</i> Для мужчин
+			</div>
+			<div class="coupontop">
+				<div class="thumb-cp">
+					<div class="discount"><i class="icons i-after"></i> -50%</div>
+					<a href="#"><img src="images/products/pr5.jpg" alt="" /></a>
+				</div>
+				<div class="couponinfo">
+					<a href="#">Процедуры омоложения кожи лица на основе косметики Hollyland</a>
+					<div class="clock">
+						<p>До завершения осталось времени</p>
+						<div id="topCountdown"></div>
+					</div>
+				</div>
+				<div class="bottom-cp">
+					<div class="price-cp">
+						<span>
+							<p><font class="price1">$ 120.<sub>00</sub></font></p>
+							<p>Осталось 10 купонов</p>
+						</span>
+						<span class="small">
+							<p>Ваша экономия</p>
+							<p><font class="price2">$ 120.00</font></p>
+						</span>
+					</div>
+					<a href="#" class="btnbuy">Купить</a>
+				</div>
+			</div>
+			<div class="items-select">
+				<label>Продавец из</label>
+				<div class="styled-select">
+	                <select name="select">
+	                  <option value="1">Израиль, Иерусалим</option>
+	                  <option value="2">Израиль, Иерусалим</option>
+	                </select>
+              	</div>
+              	<label>Доставка в</label>
+              	<div class="styled-select">
+	                <select name="select">
+	                  <option value="1">Израиль, Иерусалим</option>
+	                  <option value="2">Израиль, Иерусалим</option>
+	                </select>
+              	</div>
+              	<div id="othersl">
+	              	<div class="styled-select">
+		                <select name="select">
+		                  <option value="1">Израиль, Иерусалим</option>
+		                  <option value="2">Израиль, Иерусалим</option>
+		                </select>
+	              	</div>
+              </div>
+			</div>
+			
+			<div class="topitems">
+				<label>Сортировать по</label>
+				<span id="sortby">
+					<a href="#nogo" class="pricefilter">Цене </a>
+					<div class="sortprice">
+						<ul>
+							<li><a href="#nogo">$100 ~ $200</a></li>
+							<li><a href="#nogo">$200 ~ $300</a></li>
+							<li><a href="#nogo">$300 ~ $400</a></li>
+							<li><a href="#nogo">$400 ~ $500</a></li>
+							<li><a href="#nogo">$500 ~ $600</a></li>
+						</ul>
+					</div>
+				</span>
+				<span>
+					<a href="#" class="dc">Скидке</a>
+				</span>
+				<div class="right">
+					<label>Все действующие </label>
+					<a href="#">Сегодняшние </a>
+					<a href="#">На этой неделе</a>
+				</div>
+			</div>
+			<ul id="listcoupon">
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext" id="compactLayout"></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="itembanner"><a href="#"><img src="images/banner.jpg" alt=""></a></div>
+
+			<ul id="listcoupon">
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb">
+						<a href="#"><img src="images/products/pr6.jpg" alt="" /></a>
+						<div class="discount"><i class="icons i-after"></i> -35%</div>
+					</div>
+					<div class="discountinfo">
+						<a href="#">Изучение английского, немецкого, французского, испанского и др. языков</a>
+						<div class="rows">
+							<font class="old">$4.10 / шт.</font>
+							<font class="number">$ 13.80</font>
+						</div>
+						<div class="rows">
+							<i class="icons i-clock"></i>
+							<label>До завершения:</label>
+							<div class="countdowntext">21:18:41 </div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="panaging">
+				<a href="#" class="icons prev">Prev</a>
+				<label>Страницы:</label>
+				<a href="#" class="current">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>...
+				<a href="#">15</a>
+				<a href="#" class="icons next">Next</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div id="quicklnk">
+	<div class="container">
+		<ul id="linkun">
+			<li class="top">О площадке</li>
+			<li><a href="#">О системе</a></li>
+			<li><a href="#">Как работает площадка</a></li>
+			<li><a href="#">Анонсы и обзоры товаров</a></li>
+			<li><a href="#">Публичная оферта</a></li>
+		</ul>
+		<ul id="linkun">
+			<li class="top">Как купить</li>
+			<li><a href="#">Подписаться на обновления</a></li>
+			<li><a href="#">Как оплатить заказ</a></li>
+			<li><a href="#">Выбор доставки</a></li>
+			<li><a href="#">Защита покупателя</a></li>
+			<li><a href="#">Быстрое ознакомление</a></li>
+		</ul>
+		<ul id="linkun">
+			<li class="top">Сервисный</li>
+			<li><a href="#">Связаться с нами</a></li>
+			<li><a href="#">Часто задаваемые вопросы</a></li>
+			<li><a href="#">Спросить в сообществе</a></li>
+			<li><a href="#">Партнерская программа</a></li>
+		</ul>
+		<ul id="subscribe">
+			<li class="top">
+				<i class="imgshop i-subs"></i>Подписаться на рассылку
+			</li>
+			<li>Получайте каждую неделю наши анонсы и обзоры новинок</li>
+			<li><input type="text" name="" placeholder="Ваш E-mail" class="text" /></li>
+			<li><a class="btnreg" href="#">Подписаться</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	<div class="container">
+		<label>© 2013 Центр покупок  —  покупай с удовольствием по всему миру</label>
+		<div class="social">
+			<a href="#" class="imgshop icon-social i-face">Facebook</a>
+			<a href="#" class="imgshop icon-social i-twitter">Twitter</a>
+			<a href="#" class="imgshop icon-social i-youtube">Youtube</a>
+			<a href="#" class="imgshop icon-social i-vimeo">vimeo</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
