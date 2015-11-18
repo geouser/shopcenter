@@ -5,10 +5,10 @@
 <title>Shopcenter - Var - 1</title>
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700,400&subset=latin,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/shopcenter.css">
-<link rel="stylesheet" type="text/css" href="css/anythingslider.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
 <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="css/anythingslider.css">
+<link rel="stylesheet" type="text/css" href="css/shopcenter.css">
 <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/jquery.anythingslider.js"></script>
 <script type="text/javascript" src="js/slick/slick.min.js"></script>
@@ -76,11 +76,11 @@
 		      ]
 		});
 
-		$('#slideimage').anythingSlider({
-			buildNavigation     : true,
-			buildArrows         : false,
-			autoPlay            : true
+		$('#slideimage').slick({
+			arrows: false,
+            dots: true
 		});
+
 		$('#bestproduct').slick({
 			adaptiveHeight: false,
 		    autoplay: false,
@@ -335,6 +335,15 @@ $(function () {
 	</div>
 	<div id="main">
 		<div id="vartop">
+		    <div id="slide-var">
+            	<ul id="slideimage">
+                	<li><a href="#"><img src="images/article/slide1.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="images/article/slide2.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="images/article/slide1.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="images/article/slide2.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="images/article/slide1.jpg" alt="" /></a></li>
+                </ul>
+            </div>
         	<ul id="sidevar">
                 <li class="level1-li sub"><a class="level1-a" href="#url">Одежда и аксессуары<!--[if gte IE 7]><!--></a><!--<![endif]-->
                 <!--[if lte IE 6]><table><tr><td><![endif]-->
@@ -725,15 +734,7 @@ $(function () {
                 <li><a href="#">Спорт и развлечения</a></li>
                 <li class="end"><a href="#">Все категории <i class="icons arrow-lang"></i></a></li>
             </ul>-->
-            <div id="slide-var">
-            	<ul id="slideimage">
-                	<li><a href="#"><img src="images/article/slide1.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="images/article/slide2.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="images/article/slide1.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="images/article/slide2.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="images/article/slide1.jpg" alt="" /></a></li>
-                </ul>
-            </div>
+         
         </div>
         <div class="title-discount">
         	<span class="left">
