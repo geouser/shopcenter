@@ -3725,7 +3725,7 @@ img#pic {
 	.title-discount .right a 	{ padding: 0 5px;}
 }
 @media (max-width: 420px) {
-	.best-cp-r li .discountinfo { display: inline-block;}
+	.best-cp-r li .discountinfo { display: inline-block; font-size: 14px;}
 	.best-cp-r li 				{ margin: 5px 0;}
 	.best-cp-r li .thumb 		{ float: none;}
 }
@@ -3779,7 +3779,7 @@ img#pic {
 	.prd-new:nth-child(2) 		{ width: 50%;}
 	.listnew li 				{ float: none; display: inline-block;}
 	.items-coupon 				{ float: none; width: 50%; text-align: center; margin: 50px -2px 20px; display: inline-block;}
-	.items-coupon ul li      	{ display: inline-block; width: 200px; float: none;}
+	.items-coupon ul li      	{ display: inline-block; width: 210px; float: none;}
 }
 
 @media (max-width: 760px) {
@@ -3790,7 +3790,7 @@ img#pic {
 }
 
 @media (max-width: 400px) {
-	.listnew li 				{ width: 100%;}
+	.listnew li 				{ width: 100%; font-size: 14px;}
 }
 
 
