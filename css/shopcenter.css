@@ -397,15 +397,18 @@ body {
     text-indent: 10px;
     background-color: #EEE;
 }
-#gallery #slider  {padding-top: 40px;}
-#gallery #slider .slick-next   {top: 0; right: 25%;} 
-#gallery #slider .slick-prev   {top: 0; left: 25%;} 
+#gallery #slider  {padding-top: 15px;}
+#gallery #slider .slick-next   {top: 15px; right: 0;} 
+#gallery #slider .slick-prev   {top: 15px; right: 50px;}
+#gallery #slider li .items     { display: inline-block; float: none;}
+#gallery #slider li .items a    { display: block; height: 100%; width: 100%; cursor: pointer;}
 
         @media (max-width: 1024px) {
             #sidebar                       {width: 20%; margin-right: 2%;}
             .contentreview                 {width: 100%; padding: 10% 8%;}
-            #gallery #slider .slick-next   {top: 0; right: 20%;} 
-            #gallery #slider .slick-prev   {top: 0; left: 20%;} 
+            #gallery #slider               { padding-top: 55px;}
+            #gallery #slider .slick-next   {top: 60px; right: 20%;} 
+            #gallery #slider .slick-prev   {top: 60px; left: 20%;} 
         }
         @media (max-width: 800px) {
             #sidebar        {width: 100%; margin-right: 2%;}
@@ -424,14 +427,14 @@ body {
                                    -moz-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
                                         box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
                                                                }
-            #gallery #slider               {width: 100%; height: auto;}
+    
             .contentreview *::after        {display: none;}
-            #gallery #slider .slick-next   {right: 41%;} 
-            #gallery #slider .slick-prev   {left: 41%;} 
+            
+            #gallery #slider .slick-next   {left: 65px; right: auto;} 
+            #gallery #slider .slick-prev   {left: 15px;} 
         }
         @media (max-width: 500px) {
-            #gallery #slider .slick-next   {right: 35%;} 
-            #gallery #slider .slick-prev   {left: 35%;} 
+            #categories li                 { width: 100%;}
         }
          @media (max-width: 460px) {
             .contentreview          {width: 100%;}
@@ -446,6 +449,9 @@ body {
     margin: 30px 0 0 0;
     font-size: 16px;
     padding-bottom: 10px;
+}
+@media (max-width: 800px) {
+    .title-filter                   {float: none; display: inline-block; padding-left: 15px;}
 }
 .title-filter a {
     font-size: 13px;
@@ -542,6 +548,12 @@ body {
     position: relative;
     float: left;
     width: 100%;
+}
+@media (max-width: 800px) {
+    #gallery                       { width: 75%; display: inline-block; float: none; margin-right: -2px; margin-left: -2px; vertical-align: top;}
+}
+@media (max-width: 600px) {
+    #gallery                        { width: 100%;}
 }
 #main-r {
     position: relative;
@@ -1441,9 +1453,13 @@ body {
     .coupon-info {width: 100%;}
 }
 @media (max-width: 800px) {
-    .bestbuy .items-coupon                      { width: 220px; display: block; float: none; margin-left: auto; margin-right: auto;}
-    .bestbuy .items-coupon ul li                { width: 220px;}
-    .bestbuy .items-coupon ul li a              { width: 220px;}
+    .bestbuy                                    { width: 25%; float: none; display: inline-block; margin-left: -2px; margin-right: -2px; vertical-align: top;}
+    .bestbuy .items-coupon                      { width: 100%; display: block; float: none; margin-left: auto; margin-right: auto;}
+    .bestbuy .items-coupon ul li                { width: 100%; margin: 0;}
+    .bestbuy .items-coupon ul li a              { width: 100%;}
+}
+@media (max-width: 600px) {
+    .bestbuy                                    { display: block; margin: 0 auto; width: 270px;}
 }
 #slider li .items .discount {
     right: 0;
@@ -1791,7 +1807,11 @@ span.lesssort a.pricefilter {
 
 
 
-
+@media (max-width: 650px) {
+    .shopinfo                           { width: 100%;}
+    .sale-left                          { width: 100%; text-align: left;}
+    .saleinfo .btnreg                   { width: 100%;}
+}
 
 
 
@@ -1799,6 +1819,9 @@ span.lesssort a.pricefilter {
     position: relative;
     float: left;
     width: 100%;
+}
+@media (max-width: 1024px) {
+    .bestreview {float: none; display: inline-block;}
 }
 .bestreview li {
     position: relative;
@@ -1824,7 +1847,9 @@ span.lesssort a.pricefilter {
     .bestreview li                  { width: 50%;}
 }
 
-
+@media (max-width: 650px) {
+    .bestreview li                  { width: 100%;} 
+}
 
 
 
