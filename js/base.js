@@ -1,3 +1,8 @@
+var device;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ device = true;
+} else {device = false}
+
 $(document).ready(function () {
 	$('.checkbox').change(function(){
    	if($(this).is(':checked')) 
@@ -131,5 +136,19 @@ $(document).ready(function () {
 
 });
 });
+
+
+
+if (device) {
+		$("#sidevar li.level1-li").click(function(){
+			$(this).children().toggleClass('active');
+			$(this).siblings().children().removeClass('active');
+			$(this).toggleClass('active');
+		});
+		$("#sidevar li.level1-li").hover(function() {
+		  $(this).children('.listHolder').css('left', '-9999px');
+		  $(this).children('a').css({'background-color': 'transparent', 'color': '#4b8ab6', 'padding-left': '0'});
+		});
+} else {console.log("not device");};
 
 })

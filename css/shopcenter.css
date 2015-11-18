@@ -5,13 +5,16 @@ body {
     font-size: 12px;
     color: #383838;
 }
+* {-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;}
 .container {
     width: 980px;
     margin: 0 auto;
 }
-@media (max-width: 1024px) {
-	.container 					{ width: 97%;}
-}
+        @media (max-width: 1024px) {
+	       .container 					{ width: 97%;}
+        }
 
 
 .icons {
@@ -26,7 +29,7 @@ body {
             background-size: 100%;
 }
 #mainpage {
-    min-width: 1024px;
+    min-width: 100%;
     min-height: 100%;
 }
 #top {
@@ -191,7 +194,7 @@ body {
 			.regacc  {margin: 5px 0; width: 100%;}
 			.btnreg  {display: inline-block; width: 44%; margin: 2px 1% 0 0;}
 			.btnreg:nth-child(3) {margin-right: 0;}
-			.regacc p {text-align: left; padding-left: 2%;}
+			.regacc p {text-align: center; padding-top: 2%;}
 		}
 		@media (max-width: 420px) {
 			.btnreg  {width: 42%;}
@@ -281,9 +284,10 @@ body {
     background-color: #383838;
     color: #FFF;
     font-size: 16px;
-    padding: 8px 25px 9px 25px;
+    padding: 9px 15px 9px 15px;
     margin: 8px 0 0 10px;
     display: inline;
+    text-align: center;
     border-radius: 3px;
 }
 .btns:hover {
@@ -295,14 +299,14 @@ body {
 
 		@media (max-width: 1024px) {
 			.bginput   {width: 81%;}
-			.btns      {margin: 9px 10px 0 10px; float: right; width: 6.5%; 
+			.btns      {margin: 9px 10px 0 10px; float: right; width: 12%; 
 			}
 		}
 		@media (max-width: 680px) {
 			.bginput   {width: 80%;}
 		}
 		@media (max-width: 600px) {
-			#homesearch          {height: auto; padding: 2%; width: 96%;}
+			#homesearch          {height: auto; padding: 2%;}
 			.bginput             {text-align: center; height: auto; margin: 0; width: 100%; overflow: hidden;}
 			.bginput input.text  {width: 90%;}
 			.btns                {margin: 7px 0 0 0; width: auto;}
@@ -313,7 +317,7 @@ body {
     position: relative;
     float: left;
     width: 100%;
-    height: 32px;
+    height: auto;
     background-color: #EEE;
 }
 #flag ul li {
@@ -326,7 +330,6 @@ body {
 #flag ul li:hover,
 #flag ul li.active {
     background-color: #e85c41;
-    padding: 5px 5px 9px 5px;
     border-color: #e85c41;
 }
 .iflag {
@@ -373,6 +376,10 @@ body {
     width: 210px;
     font-weight: 300;
 }
+        @media (max-width: 1024px) {
+            #sidebar        {width: 20%; margin-right: 2%;}
+            .contentreview  {width: 100%; padding: 10% 8%;}
+        }
 #sidebar h3 {
     font-size: 16px;
     font-weight: 300;
@@ -502,11 +509,15 @@ body {
     float: right;
     width: 740px;
 }
+        @media (max-width: 1024px) {
+            #main-r {width: 77%;}
+        }
 .breadcrumbs {
     color: #383838;
     float: left;
     position: relative;
     width: 100%;
+    z-index: 2;
 }
 .breadcrumbs a {
     padding: 0 3px;
@@ -1109,6 +1120,9 @@ body {
 				                         }
 				.bginput .styled-select select {padding-left: 5px; font-size: 14px;}
 			}
+            @media (max-width: 400px) {
+                .bginput .styled-select select  {font-size: 12px;}
+            }
 
 
 
@@ -3311,13 +3325,22 @@ img#pic {
     width: 620px;
     height: 436px;
     background: url(../images/bgtext.jpg) no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
     top: -25px;
     right: -80px;
     z-index: 0;
-}
+} 
+
+        @media (max-width: 1024px) {
+            .bannertext    {right: 0; width: 70%; height: 380px;}
+        }
+
 .bannertext .link {
     position: absolute;
-    width: 130px;
+    width: auto;
     font-size: 22px;
     font-weight: 300;
     color: #FFF;
@@ -3479,6 +3502,14 @@ img#pic {
     width: 740px;
     margin: 12px 0 0 0;
 }
+
+    @media (max-width: 1024px) {
+        #slide-var                  { width: 74%;}
+    }
+    @media (max-width: 700px) {
+       #slide-var {width: 100%;}
+    }
+
 .title-discount {
     position: relative;
     float: left;
@@ -3526,7 +3557,7 @@ img#pic {
 .best-cp {
     position: relative;
     float: left;
-    width: 940px;
+    width: 100%;
     margin: 25px 0 0 0;
     background: #EEE;
     padding: 20px;
@@ -3557,7 +3588,7 @@ img#pic {
     float: left;
     position: relative;
     float: left;
-    width: 350px;
+    width: 370px;
     padding: 10px;
     background-color: #FFF;
 }
@@ -3810,10 +3841,12 @@ img#pic {
     width: 240px;
     float: left;
 }
+
 #sidevar li.level1-li {
     float: left;
     height: 32px;
     width: 240px;
+    position: relative;
 }
 #sidevar li.level1-li a.level1-a {
     display: block;
@@ -3831,6 +3864,31 @@ img#pic {
     right: 0;
     top: 0;
 }
+
+    @media (max-width: 1024px) {
+        #sidevar                 { width: 25%;}
+        #sidevar li.level1-li    { width: 100%;}
+    }
+    @media (max-width: 700px) {
+        #sidevar                 { width: 100%;}
+        #sidevar li.level1-li    { width: 33%; text-align: center;}
+    }
+    @media (max-width: 600px) {
+        #sidevar li.level1-li    { width: 49%;
+                                    margin: 0.5%;
+                                    background: #F6F6F6;
+                                    -webkit-border-radius: 4px;
+                                   -moz-border-radius: 4px;
+                                        border-radius: 4px;
+                                   -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                   -moz-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                        box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                 }
+    }
+
+
+
+
 #sidevar div.listHolder {
     position: absolute;
     left: -9999px;
@@ -3845,9 +3903,9 @@ img#pic {
     background-color: #FFF;
 }
 #sidevar div.listCol {
-    width: 200px;
+    width: 195px;
     float: left;
-    margin: 22px 15px 0 22px;
+    margin: 22px 16px 0 16px;
     display: inline;
 }
 #sidevar div.listCol ul {
@@ -3869,6 +3927,9 @@ img#pic {
     display: block;
     font-size: 12px;
 }
+#sidevar div.listCol ul li img {
+    max-width: 100%;
+}
 #sidevar div.listCol ul li.end {
     margin-top: 30px;
 }
@@ -3887,13 +3948,61 @@ img#pic {
 #sidevar li.sub:hover > a {
     border-right: 0;
 }
-#sidevar:hover div.listHolder {
-    left: 240px;
-    top: 0px;
+#sidevar li.level1-li:hover > div.listHolder {
+    left: 100%;
+    top: -20px;
 }
-#sidevar div.listCol ul li a:hover {
-    background: none;
+
+div.listHolder.active {
+    left: 100% !important; 
+    top: -20px;
 }
+#sidevar li.level1-li a.active {
+    background-color: #EEE !important;
+    color: #383838 !important;
+    padding-left: 12px !important;;
+}
+
+    @media (max-width: 1024px) {
+        #sidevar div.col1    {width: 300%; border: 5px solid #EEE;}
+        #sidevar div.listCol {margin: 6px 1% 0 1%; width: 30%; padding-left: 1%;}
+    }
+
+    @media (max-width: 820px) {
+        #sidevar div.listCol ul li h3 {font-size: 13px;}
+     }
+    @media (max-width: 820px) {
+        #sidevar div.listCol ul li h3 {font-size: 13px;}
+    }
+    @media (max-width: 700px) {
+        div.listHolder.active { left: 0 !important; top: 25px;}
+        #sidevar li.level1-li:hover > div.listHolder { left: 0 !important; top: 25px;}
+        #sidevar li.level1-li:nth-child(3n+2):hover > div.listHolder {left: -100% !important;}
+        #sidevar li.level1-li:nth-child(3n):hover > div.listHolder   {left: -200% !important;}
+        #sidevar li.level1-li:nth-child(3n+2) div.listHolder.active  {left: -100% !important;}
+        #sidevar li.level1-li:nth-child(3n) div.listHolder.active    {left: -200% !important;}
+    }
+     @media (max-width: 600px) {
+        #sidevar div.col1                            {width: 200%;}
+        div.listHolder.active                        { left: 0 !important; top: 25px;}
+        #sidevar li.level1-li:hover > div.listHolder { left: 0 !important; top: 25px;}
+        #sidevar li.level1-li:nth-child(3n+2):hover > div.listHolder {left: 0% !important;}
+        #sidevar li.level1-li:nth-child(3n):hover > div.listHolder   {left: 0% !important;}
+        #sidevar li.level1-li:nth-child(3n+2) div.listHolder.active  {left: 0% !important;}
+        #sidevar li.level1-li:nth-child(3n) div.listHolder.active    {left: 0% !important;}
+        #sidevar li.level1-li:nth-child(2n):hover > div.listHolder {left: -101% !important;}
+        #sidevar li.level1-li:nth-child(2n) div.listHolder.active  {left: -101% !important;}
+        #sidevar li.level1-li a.active                             {padding-left: 0 !important;}
+    }
+    @media (max-width: 460px) {
+       #sidevar div.listCol {margin: 10px 1% 0 1%; width: 45%; padding-left: 1%;}
+    }
+     @media (max-width: 360px) {
+        #sidevar li.level1-li a.level1-a   {font-size: 12px; font-weight: 700;}
+    }
+
+
+
 .special-pr {
     float: left;
     width: 100%;
@@ -3905,8 +4014,8 @@ img#pic {
 }
 .special-pr .desc {
     float: left;
-    width: 164px;
-    padding: 0px 18px 18px 18px;
+    width: 90%;
+    padding: 0 5% 6% 5%;
     font-size: 14px;
     color: #FFF;
 }
@@ -3916,3 +4025,7 @@ img#pic {
 .special-pr .desc p a {
     color: #f98971;
 }
+
+@media (max-width: 460px) {
+       .special-pr .desc  {font-size: 12px;}
+    }
