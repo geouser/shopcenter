@@ -3,8 +3,7 @@
  *****************************/
 /* change the ID & dimensions to match your slider */
 #slider {
-	width: 210px;
-	height: 550px;
+	height: auto;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
 	overflow-y: auto;
@@ -350,7 +349,7 @@ height: 15px; /* limit height, needed for IE9 of all things */
 #slider li .peoplereview .name{ display: inline-block; width: 100%; vertical-align: middle;}
 #slider li .peoplereview .name .avatar{ display: inline-block; width: 80px; height: 80px; vertical-align: middle; margin: 0 18px 0 0;}
 #slider li .peoplereview .name .info{ display: inline-block; width: 80px; vertical-align: middle; font-size: 14px;}
-.contentreview  { position: relative; float: left; width: 174px; padding: 18px; background-color: #EEE; line-height: 18px; margin: 20px 0 0 0;}
+.contentreview  { position: relative; float: left; width: 95%; padding: 18px; background-color: #EEE; line-height: 18px; margin: 20px 0 0 0;}
 .contentreview p{ padding-top: 14px;}
 .contentreview :after{
 content:'';
@@ -540,4 +539,4 @@ box-shadow: 0px 4px 0px #010101 inset;
 #bestprice-cpn .anythingSlider-default .forward  { left: 57%!important; top:-60px;}
 
 
-#gallery .anythingSlider  {width: 100% !important;}
+#gallery .anythingSlider  width: 100% !important;xxxxxxxxxx

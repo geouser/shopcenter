@@ -397,17 +397,42 @@ body {
     text-indent: 10px;
     background-color: #EEE;
 }
+#gallery #slider  {padding-top: 40px;}
+#gallery #slider .slick-next   {top: 0; right: 25%;} 
+#gallery #slider .slick-prev   {top: 0; left: 25%;} 
 
         @media (max-width: 1024px) {
-            #sidebar        {width: 20%; margin-right: 2%;}
-            .contentreview  {width: 100%; padding: 10% 8%;}
+            #sidebar                       {width: 20%; margin-right: 2%;}
+            .contentreview                 {width: 100%; padding: 10% 8%;}
+            #gallery #slider .slick-next   {top: 0; right: 20%;} 
+            #gallery #slider .slick-prev   {top: 0; left: 20%;} 
         }
         @media (max-width: 800px) {
-            #sidebar        {width: 100%; margin-right: 2%;}
-            .contentreview  {width: 70%; display: inline-block; vertical-align: top; padding: 5px;}
-            .peoplereview .name  {width: 28%; display: inline-block; vertical-align: top; text-align: center;}
-            .peoplereview .name *  {display: inline-block; vertical-align: middle;}
-            #categories li         {font-size: 15px;}
+            #sidebar                                 {width: 100%; margin-right: 2%;}
+            .contentreview                           {width: 78%; display: inline-block; vertical-align: top; padding: 12px; margin-top: 0; font-size: 13px;}
+            #gallery #slider  .peoplereview .name    {width: 20%; display: inline-block; vertical-align: top; text-align: center; font-weight: 700;}
+            #gallery #slider  .peoplereview .name *  {display: block; margin: 0 auto 10px;}
+            #categories li         {font-size: 15px; display: block; width: auto; float: none;
+                                   width: 300px; margin: 5px 0; padding: 5px;
+                                   -webkit-border-radius: 4px;
+                                   -moz-border-radius: 4px;
+                                        border-radius: 4px;
+                                -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                   -moz-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                        box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                                               }
+            #gallery #slider               {width: 100%; height: auto;}
+            .contentreview *::after        {display: none;}
+            #gallery #slider .slick-next   {right: 41%;} 
+            #gallery #slider .slick-prev   {left: 41%;} 
+        }
+        @media (max-width: 500px) {
+            #gallery #slider .slick-next   {right: 35%;} 
+            #gallery #slider .slick-prev   {left: 35%;} 
+        }
+         @media (max-width: 460px) {
+            .contentreview          {width: 100%;}
+            #gallery #slider  .peoplereview .name {width: 100%;}
         }
 
 
@@ -522,6 +547,9 @@ body {
 }
         @media (max-width: 1024px) {
             #main-r {width: 77%;}
+        }
+        @media (max-width: 800px) {
+            #main-r {width: 100%;}
         }
 .breadcrumbs {
     color: #383838;
@@ -3218,6 +3246,23 @@ img#pic {
     width: 100%;
     z-index: 9;
 }
+
+        @media (max-width: 1000px) {
+            .reg-right, .reg-left   {float: none; display: block; margin: 30px auto;}
+        }
+        @media (max-width: 880px) {
+            .reg-right, .reg-left   {float: none; display: block; margin: 30px auto;}
+        }
+        @media (max-width: 400px) {
+            .reg-right, .reg-left   {width: 100%;}
+        }
+        @media (max-width: 360px) {
+            .bgreg li .control-left   {margin-left: 15px; display: block; line-height: 2;}
+            .bgreg li .control            {width: 100%;}
+            .bgreg li .control .textcheck {width: 80% !important;}
+        }
+
+
 .protection {
     float: left;
     width: 100%;
@@ -3295,6 +3340,18 @@ img#pic {
     font-size: 13px;
     padding: 20px 15px 0 15px;
 }
+
+        @media (max-width: 1024px) {
+            .step li .descstep   {font-size: 12px;}
+            .step        {margin: 25px 0;}
+            .step li     {padding: 20px 5px 0 5px;}
+        }
+        @media (max-width: 600px) {
+            .step li   {width: 100%; padding: 20px;}
+            .step li .namestep  {display: block; margin: 10px auto;}
+        }
+
+
 .iconstep {
     display: inline-block;
     vertical-align: middle;
@@ -3347,6 +3404,12 @@ img#pic {
 
         @media (max-width: 1024px) {
             .bannertext    {right: 0; width: 70%; height: 380px;}
+        }
+         @media (max-width: 600px) {
+            .bannertext    {display: none;}
+            .pagetext      {margin-top: 20px;}
+            .protection    {margin-top: 20px;}
+            .protection li a  {font-size: 14px; font-weight: 700;}
         }
 
 .bannertext .link {
