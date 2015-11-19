@@ -371,6 +371,9 @@ body {
     width: 100%;
     margin: 25px 0 0 0;
 }
+img {
+    max-width: 100%;
+}
 #sidebar {
     position: relative;
     float: left;
@@ -560,6 +563,9 @@ body {
     position: relative;
     float: right;
     width: 740px;
+}
+#main-r img {
+    max-width: 100%;
 }
         @media (max-width: 1024px) {
             #main-r {width: 77%;}
@@ -1480,14 +1486,20 @@ body {
     .coupon-info {width: 100%;}
 }
 @media (max-width: 800px) {
-    .bestbuy                                    { width: 25%; float: none; display: inline-block; margin-left: -2px; margin-right: -2px; vertical-align: top;}
-    .bestbuy .items-coupon                      { width: 100%; display: block; float: none; margin-left: auto; margin-right: auto; text-align: center;}
-    .bestbuy .items-coupon ul li                { width: 100%; margin: 0;}
+    .bestbuy                                    { width: 100%; margin-left: -2px; margin: 20px 0; }
+    .bestbuy .items-coupon                      { width: 100%; display: block; clear: both; float: none; margin-left: auto; margin-right: auto; text-align: center;}
+    .bestbuy .items-coupon ul li                { width: 33%; margin: 0; float: left; margin: 20px 5px; }
     .bestbuy .items-coupon ul li a              { width: 100%;}
 }
 @media (max-width: 600px) {
-    .bestbuy                                    { display: block; margin: 0 auto; width: 270px;}
+    .bestbuy .items-coupon ul li                { width: 47%;}
 }
+@media (max-width: 400px) {
+    .bestbuy .items-coupon ul li                { width: 90%; float: none; display: inline-block;}
+}
+
+
+
 #slider li .items .discount {
     right: 0;
 }
@@ -1823,7 +1835,7 @@ span.lesssort a.pricefilter {
     .shopinfo .title                    { line-height: normal; padding: 5px;}
 }
 @media (max-width: 800px) {
-    .shopinfo                           { width: 50%;}
+    .shopinfo                           { width: 100%;}
 
     .sale-left                          { width: 50%; text-align: center; margin-top: 30px;}
     .sale-left .avatar                  { display: inline-block; vertical-align: middle; float: none;}
@@ -2433,7 +2445,7 @@ img#pic {
 #sidebar h2 {
     font-size: 30px;
     font-weight: 300;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .recommended {
@@ -3255,6 +3267,19 @@ img#pic {
     width: 380px;
     vertical-align: middle;
 }
+
+        @media (max-width: 1024px) {
+            .sortdes .clumnright,
+            .sortdes .clumnleft    {width: 49%;}
+        }
+        @media (max-width: 860px) {
+            .sortdes .clumnright,
+            .sortdes .clumnleft    {width: 100%;}
+            .sortdes .clumnleft>img,
+            .sortdes .clumnright>img {display: block; margin: 10px auto;}
+        }
+
+
 .article .popular-reveiew p {
     line-height: normal;
 }
