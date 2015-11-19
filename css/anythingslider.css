@@ -17,6 +17,10 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 }
+
+@media (max-width: 1024px) {
+	 #slider2 {width: 100%; height: auto;}
+}
 #couponlist{
 	width: 740px;
 	height: 280px; margin:0; padding:0;
@@ -352,15 +356,23 @@ height: 15px; /* limit height, needed for IE9 of all things */
 #slider1 li .itemspp:nth-child(7n),#slider1 li .itemspp:first-child + li + li + li + li + li + li{ margin: 0;}
 .salepeople .anythingSlider-default .back{ left: 165px!important; }
 .salepeople .anythingSlider-default .forward{ left: 215px!important;}
-#slider2{ height: 280px;}
-#slider2 li {  padding: 30px 0 0 0;}
+#slider2{ margin-top: 30px;}
+#slider2 li > img 	{width: 95%;}
+#slider2 li {  padding: 5px; display: inline-block; text-align: center;}
 #slider2 li .itemspp{ position:relative; float:left; width:150px!important; margin:0 40px 0 0; display:inline; color: #999;}
-#slider2 li .itemspp .thumb{ position: relative; float: left; width: 100%;}
+#slider2 li .itemspp .thumb{ position: relative; width: 90%; display: inline-block;}
 #slider2 li .itemspp .infopeople{ position: relative; float: left; width: 100%;}
 #slider2 li font.number{ font-size: 16px; color: #ca4228;}
 #slider2 li a { padding: 0 6px 0 0;}
-#slider2 li .itemspp p{ padding: 5px 0 0 0;}
+#slider2 li p {text-align: left;}
+#slider2 li .itemspp p{ padding: 5px 0 0 0; text-align: left;}
 #slider2 li .itemspp:nth-child(4n),#slider1 li .itemspp:first-child + li + li + li{ margin: 0;}
+
+#slider2 .slick-arrow {top: -5px;}
+#slider2 .slick-prev 	{left: 210px;}
+#slider2 .slick-next 	{left: 260px;}
+
+
 .otherprd .anythingSlider-default .back{ left: 30%!important; }
 .otherprd .anythingSlider-default .forward{ left: 38%!important;}
 

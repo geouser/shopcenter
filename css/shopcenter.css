@@ -411,8 +411,8 @@ body {
             #gallery #slider .slick-prev   {top: 60px; left: 20%;} 
         }
         @media (max-width: 800px) {
-            #sidebar        {width: 100%; margin-right: 2%;}
-            #categories li.parent  { width: 100%;}
+            #sidebar        {width: 100%; margin-right: 0;}
+            #categories li.parent  { width: 100%; margin-left: 0; margin-right: 0;}
             #sidebar h3            { display: block; float: none; width: 100%;}
             .contentreview                           {width: 78%; display: inline-block; vertical-align: top; padding: 12px; margin-top: 0; font-size: 13px;}
             #gallery #slider  .peoplereview .name    {width: 20%; display: inline-block; vertical-align: top; text-align: center; font-weight: 700;}
@@ -434,7 +434,7 @@ body {
             #gallery #slider .slick-prev   {left: 15px;} 
         }
         @media (max-width: 500px) {
-            #categories li                 { width: 100%;}
+            #categories li                 { width: 100%; margin-left: 0; margin-right: 0;}
         }
          @media (max-width: 460px) {
             .contentreview          {width: 100%;}
@@ -577,6 +577,24 @@ body {
     padding: 0 3px;
     color: #383838;
 }
+@media (max-width: 1024px) {
+    .breadcrumbs a      {
+        padding: 5px;
+        -webkit-border-radius: 4px;
+           -moz-border-radius: 4px;
+                border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+           -moz-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+    }
+}
+@media (max-width: 800px) {
+    .breadcrumbs                { margin-top: 20px;}
+    .breadcrumbs span              { margin-bottom: 15px; display: inline-block;}
+}
+
+
+
 .title-items {
     position: relative;
     float: left;
@@ -1903,6 +1921,10 @@ span.lesssort a.pricefilter {
 #imagebig {
     height: 320px;
     width: 320px;
+    max-width: 100%;
+}
+#imagebig img {
+    width: 100%;
 }
 .imagesmall {
     float: left;
@@ -1942,6 +1964,16 @@ span.lesssort a.pricefilter {
     display: block;
     transition-duration: 0.5;
 }
+@media (max-width: 1024px) {
+    .galleryprd                     { width: 100%; display: inline-block; float: none;}
+    .imagelib                       { text-align: center;}
+    .imgout                         { display: inline-block; max-width: 100%;}
+    .allthumb                       { text-align: center; margin-top: 20px;}
+    .allthumb li                    { display: inline-block; float: none; margin: 0 3px;}
+}
+
+
+
 .infodetails {
     position: relative;
     float: right;
@@ -2151,6 +2183,9 @@ span.lesssort a.pricefilter {
     margin: 10px 0 0 45px;
     display: inline;
 }
+@media (max-width: 480px) {
+    .wl {margin-left: 5px;}
+}
 .wl a.wish {
     font-size: 14px;
     border-bottom: 1px #4b89b5 dotted;
@@ -2198,6 +2233,16 @@ span.lesssort a.pricefilter {
 .shiptitle a:hover {
     text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+    .infodetails                    { width: 100%; display: inline-block; float: none; margin-top: 40px;}
+    .fees                           { width: 100%;}
+    .option                         { width: 100%; float: none; display: inline-block;}
+}
+@media (max-width: 500px) {
+    .shiptitle span                 { display: inline-block; width: 50%; margin-left: -2px; margin-right: -2px;}
+}
+
 .configuration {
     position: relative;
     float: left;
@@ -2221,9 +2266,17 @@ span.lesssort a.pricefilter {
     float: left;
     width: 72%;
 }
+@media (max-width: 500px) {
+    .configuration ul li .left {width: 35%;}
+    .configuration ul li .right {width: 65%;}
+}
 .configuration ul li:nth-child(2n) {
     background-color: #FFF;
 }
+
+
+
+
 .desc {
     position: relative;
     float: left;
@@ -2242,6 +2295,16 @@ span.lesssort a.pricefilter {
     padding: 25px 10px 10px 0;
     vertical-align: middle;
 }
+
+@media (max-width: 1024px) {
+    .desc table td                  { width: 50%; vertical-align: top;}
+    .desc table td img              { width: 100%;}
+}
+
+@media (max-width: 500px) {
+    .desc table td                  { display: inline-block; width: 100%; padding: 0;}
+}
+
 .feedback {
     position: relative;
     float: left;
@@ -2309,6 +2372,9 @@ span.lesssort a.pricefilter {
     font-size: 11px;
     color: #a9a9a9;
 }
+@media (max-width: 400px) {
+    .feedbacklist li .cmt .topcmt .vote {display: inline-block; float: none; text-align: left; width: 100%; margin-top: 10px;}
+}
 .feedbacklist li .cmt .topcmt .vote span {
     padding: 0 4px;
 }
@@ -2342,6 +2408,14 @@ span.lesssort a.pricefilter {
     border-right-color: #EEE;
     border-width: 15px;
 }
+@media (max-width: 1024px) {
+    .feedbacklist li        { margin-bottom: 20px; float: none; display: inline-block; width: 100%;}
+    .feedbacklist li .cmt {float: none; width: 100%; display: inline-block;}
+    .feedbacklist li .cmt:after {display: none;}
+} 
+
+
+
 img#pic {
     position: absolute;
     left: 0;

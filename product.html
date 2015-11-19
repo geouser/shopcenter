@@ -44,6 +44,13 @@
 		            slidesToShow: 2,
 		            slidesToScroll: 1
 		          }
+		        },
+		        {
+		          breakpoint: 400,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1
+		          }
 		        }
 		        // You can unslick at a given breakpoint now by adding:
 		        // settings: "unslick"
@@ -53,8 +60,60 @@
 
 		$('#slider1').anythingSlider(
 		);
-		$('#slider2').anythingSlider(
-		);
+		$('#slider2').slick({
+			adaptiveHeight: false,
+		    autoplay: false,
+		    autoplaySpeed: 12000,
+		    arrows: true,
+		    dots: false,
+		    fade: false,
+		    infinite: true,
+		    initialSlide: 1,
+		    pauseOnHover: true,
+		    slidesToShow: 4,
+		    slidesToScroll: 2,
+		    slide: '.itemspp',
+		    speed: 1000,
+		    touchMove: true,
+		    useCSS: true,
+		    responsive: [
+		        {
+		          breakpoint: 1024,
+		          settings: {
+		            slidesToShow: 4,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 800,
+		          settings: {
+		            slidesToShow: 4,
+		            slidesToScroll: 2
+		          }
+		        },
+		        {
+		          breakpoint: 650,
+		          settings: {
+		            slidesToShow: 3,
+		            slidesToScroll: 1
+		          }
+		        },
+		        {
+		          breakpoint: 500,
+		          settings: {
+		            slidesToShow: 2,
+		            slidesToScroll: 2,
+		            adaptiveHeight: true
+		          }
+		        }
+		        // You can unslick at a given breakpoint now by adding:
+		        // settings: "unslick"
+		        // instead of a settings object
+		      ]
+		});
+
+
+
 	})
 </script>
 <!--[if IE]><link type="text/css" rel="stylesheet" href="css/ie.css" /><![endif]-->
@@ -519,8 +578,7 @@
 					</div>
 					<div class="desc">
 						<p>Freeshipping 20pc a lot The Hobbit ring Lord of the Rings Tbranduil PIN Of Air Blue Zircon retro elegant brooch XFH022 </p>
-						<p>A we make photo my ourself,the items as showing on piture<br>
-B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fedex.</p>
+						<p>A we make photo my ourself,the items as showing on piture<br> B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fedex.</p>
 							<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							  <tr>
 							    <td><img src="images/products/pr9.jpg" alt=""></td>
@@ -610,8 +668,7 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 			<div class="otherprd">
 				<h1>Похожие товары</h1>
 				<ul id="slider2">
-					<li>
-						<div class="itemspp">
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -624,8 +681,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -638,8 +695,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -652,8 +709,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -666,10 +723,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-					</li>
-					<li>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -682,8 +737,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -696,8 +751,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -710,8 +765,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -724,10 +779,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-					</li>
-					<li>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -740,8 +793,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -754,8 +807,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -768,8 +821,8 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-						<div class="itemspp">
+						</li>
+						<li class="itemspp">
 							<img src="images/products/pr1.jpg" alt="">
 							<div class="infopeople">
 								<p><a href="#">Футболка мужская с принтом Чарли-Чаплин...</a></p>
@@ -782,8 +835,7 @@ B 20pcs a lot,opp bag packing,if more than 200pcs ,freeshipping by DHL EMS or Fe
 									<a href="#"><i class="icons icon-heart"></i></a>
 								</div>
 							</div>
-						</div>
-					</li>
+						</li>
 				</ul>
 			</div>
 		</div>
