@@ -11,6 +11,7 @@ body {
 .container {
     width: 980px;
     margin: 0 auto;
+    overflow: hidden;
 }
         @media (max-width: 1024px) {
 	       .container 					{ width: 97%;}
@@ -974,6 +975,14 @@ body {
     background-position: 0px -144px;
 }
 
+            @media (max-width: 1024px) {
+                .itembanner      {width: 100%;}
+                .itembanner img  {max-width: 100%;}
+                .panaging a      {padding: 3px 6px;}
+            }
+            @media (max-width: 500px) {
+                .panaging a      {padding: 3px 6px;}
+            }
 
 
 /*--------------------------------------------------------
@@ -1431,7 +1440,7 @@ body {
     width: 100%;
 }
 .bestbuy .items-coupon {
-    width: 210px;
+    width: 100%;
 }
 @media (max-width: 1024px) {
     .bestbuy .items-coupon                      { width: 100%;}
@@ -2326,6 +2335,14 @@ img#pic {
     font-size: 30px;
     font-weight: 300;
 }
+
+
+@media (max-width: 1024px) {
+    #sidebar h2 {font-size: 24px;}
+}
+@media (max-width: 800px) {
+    #sidebar h2 {font-size: 22px;}
+}
 .recommended {
     position: relative;
     float: left;
@@ -2372,6 +2389,7 @@ img#pic {
     padding: 15px 0 20px 0;
     background-color: #EEE;
     font-size: 14px;
+    text-align: center;
 }
 .popular-reveiew a {
     font-size: 13px;
@@ -2380,10 +2398,14 @@ img#pic {
     padding-top: 5px;
 }
 .popular-reveiew li {
-    float: left;
+    float: none;
     width: 160px;
-    margin: 0 5px 0 17px;
-    display: inline;
+    margin: 0 5px 0 10px;
+    display: inline-block;
+}
+
+.popular-reveiew li img {
+    max-width: 100%;
 }
 .topreview {
     position: relative;
@@ -2425,6 +2447,24 @@ img#pic {
 .country .arrow-lang {
     top: 14px;
 }
+
+        @media (max-width: 1024px) {
+            .popular-reveiew li  {margin: 10px 40px;}
+        }
+        @media (max-width: 1000px) {
+            .country { float: none; display: block; clear: both;}
+        }
+        @media (max-width: 800px) {
+            .popular-reveiew li  {margin: 10px 5px;}
+        }
+        @media (max-width: 720px) {
+            .popular-reveiew li  {margin: 10px 35px;}
+        }
+        @media (max-width: 500px) {
+            .popular-reveiew li  {margin: 10px 5px;}
+            .topreview span:first-child {display: block; float: none;}
+        }
+
 .listreviews {
     width: 100%;
 }
