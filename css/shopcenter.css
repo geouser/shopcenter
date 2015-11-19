@@ -1481,7 +1481,7 @@ body {
 }
 @media (max-width: 800px) {
     .bestbuy                                    { width: 25%; float: none; display: inline-block; margin-left: -2px; margin-right: -2px; vertical-align: top;}
-    .bestbuy .items-coupon                      { width: 100%; display: block; float: none; margin-left: auto; margin-right: auto;}
+    .bestbuy .items-coupon                      { width: 100%; display: block; float: none; margin-left: auto; margin-right: auto; text-align: center;}
     .bestbuy .items-coupon ul li                { width: 100%; margin: 0;}
     .bestbuy .items-coupon ul li a              { width: 100%;}
 }
@@ -1814,7 +1814,7 @@ span.lesssort a.pricefilter {
 }
 #sidebar h3.spacer,
 #sidebar h2.spacer {
-    float: left;
+    float: none;
     padding-top: 35px;
 }
 @media (max-width: 1024px) {
@@ -2433,25 +2433,21 @@ img#pic {
 #sidebar h2 {
     font-size: 30px;
     font-weight: 300;
+    margin-bottom: 5px;
 }
 
-
-@media (max-width: 1024px) {
-    #sidebar h2 {font-size: 24px;}
-}
-@media (max-width: 800px) {
-    #sidebar h2 {font-size: 22px;}
-}
 .recommended {
     position: relative;
     float: left;
     width: 100%;
+    margin-bottom: 30px;
 }
 .items-recm {
     position: relative;
     float: left;
     width: 170px;
 }
+
 .items-recm ul li {
     position: relative;
     float: left;
@@ -2469,6 +2465,23 @@ img#pic {
 .items-recm ul li a.recm-more {
     color: #999;
 }
+
+
+@media (max-width: 1024px) {
+    #sidebar h2 {font-size: 24px;}
+}
+@media (max-width: 800px) {
+    #sidebar h2 {font-size: 22px;}
+    .items-recm    {width: 100%;}
+    .items-recm ul {text-align: center;}
+    .items-recm ul li  {float: none; display: inline-block; width: 200px;}
+    .recommended   {width: 75%;}
+}
+@media (max-width: 600px) {
+    .recommended   {width: 100%;}
+}
+
+
 .alldeal {
     float: left;
     width: 100%;
@@ -2600,6 +2613,13 @@ img#pic {
     border-bottom: 0;
     padding-bottom: 0;
 }
+
+
+        @media (max-width: 600px) {
+            .listreviews li p.date  {margin-top: 20px; text-align: right;}
+        }
+
+
 .tip-prd {
     position: absolute;
     width: 300px;
