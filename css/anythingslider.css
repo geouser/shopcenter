@@ -345,7 +345,15 @@ height: 15px; /* limit height, needed for IE9 of all things */
 	#slider li .items img 	{ max-width: 100%;}
 }
 @media (max-width: 800px) {
-	#slider li .items 		{ margin-top: 5px; margin-bottom: 5px;}
+	#slider li .items 		{ margin-top: 5px; margin-bottom: 5px; width: 20%; margin-left: -2px; margin-right: -2px;}
+}
+@media (max-width: 550px) {
+	#slider li .items 		{ width: 25%;}
+	#slider li .items a 	{ text-align: center;}
+    #slider li              { text-align: left;}
+}
+@media (max-width: 440px) {
+	#slider li .items 		{ width: 33.3%;}
 }
 #slider1 li {  padding: 30px 0 0 0;}
 #slider1 li .itemspp{ position:relative; float:left; width:80px!important; margin:0 30px 0 0; display:inline; font-size: 11px; color: #999;}

@@ -554,10 +554,7 @@ img {
     width: 100%;
 }
 @media (max-width: 800px) {
-    #gallery                       { width: 75%; display: inline-block; float: none; margin-right: -2px; margin-left: -2px; vertical-align: top;}
-}
-@media (max-width: 600px) {
-    #gallery                        { width: 100%;}
+    #gallery                       { width: 100%; display: inline-block; float: none; margin-right: -2px; margin-left: -2px; vertical-align: top;}
 }
 #main-r {
     position: relative;
@@ -1486,7 +1483,7 @@ img {
     .coupon-info {width: 100%;}
 }
 @media (max-width: 800px) {
-    .bestbuy                                    { width: 100%; margin-left: -2px; margin: 20px 0; }
+    .bestbuy                                    { width: 100%; margin-left: -2px; margin: 20px 0; display: none;}
     .bestbuy .items-coupon                      { width: 100%; display: block; clear: both; float: none; margin-left: auto; margin-right: auto; text-align: center;}
     .bestbuy .items-coupon ul li                { width: 33%; margin: 0; float: left; margin: 20px 5px; }
     .bestbuy .items-coupon ul li a              { width: 100%;}
@@ -1771,12 +1768,20 @@ span.lesssort a.pricefilter {
     margin: 0 12px 0 0;
     display: inline;
 }
+
 .saleinfo {
     position: relative;
     float: right;
     width: 118px;
     color: #999;
 }
+
+@media (max-width: 1024px) {
+    .sale-left  {text-align: center;}
+    .sale-left .avatar  { float: none; display: inline-block; margin-right: 0;}
+    .saleinfo           { float: none; display: inline-block; max-width: 100%;}
+}
+
 .saleinfo p {
     padding: 5px 0 0 5px;
 }
@@ -1833,15 +1838,19 @@ span.lesssort a.pricefilter {
     .shopinfoin:after                   { display: none;}
     .shopinfoin                         { width: 100%; padding-left: 5px; padding-right: 5px; margin-left: 0; box-sizing: border-box;}
     .shopinfo .title                    { line-height: normal; padding: 5px;}
+    #searchleft                         { width: 100%; border-width: 10px;}
+    #searchleft input.text              { height: 100%;}
+    #searchleft .btnsl                  { margin: 6px 0 0; width: 15%; background-repeat: no-repeat; background-position: 100% 302px;}
 }
 @media (max-width: 800px) {
     .shopinfo                           { width: 100%;}
 
-    .sale-left                          { width: 50%; text-align: center; margin-top: 30px;}
-    .sale-left .avatar                  { display: inline-block; vertical-align: middle; float: none;}
+    .sale-left                          { width: 50%; text-align: left; margin-top: 15px;}
+    .sale-left .avatar                  { display: inline-block; vertical-align: middle; float: none; margin-right: 10px;}
     .saleinfo                           { display: inline-block; vertical-align: middle; float: none;}
 
     #searchleft                         { width: 100%;}
+    #sidebar h3.spacer                  { display: none;}
 }
 
 
@@ -1989,7 +1998,7 @@ span.lesssort a.pricefilter {
     .galleryprd                     { width: 100%; display: inline-block; float: none;}
     .imagelib                       { text-align: center;}
     .imgout                         { display: inline-block; max-width: 100%;}
-    .allthumb                       { text-align: center; margin-top: 20px;}
+    .allthumb                       { text-align: left; margin-top: 20px;}
     .allthumb li                    { display: inline-block; float: none; margin: 0 3px;}
 }
 
