@@ -469,9 +469,26 @@ img {
     width: 85%;
     padding: 4px 0;
     font-size: 13px;
-    color: #9999;
+    color: #999;
     padding-left: 25px;
 }
+@media (max-width: 800px) {
+    #filter {text-align: center;}
+    #filter li {  width: 45%; 
+        padding: 5px 5px 5px 25px;
+        float: none;
+        display: inline-block;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+        -moz-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+        box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;}
+}
+@media  (max-width: 500px) {
+    #filter li {width: 90%; margin: 5px 0;}
+}
+
 #filter li input {
     position: absolute;
     left: 0;
@@ -512,7 +529,7 @@ img {
 }
 #colors li .boxcolor {
     float: left;
-    width: 35px;
+    width: 100%;
     height: 25px;
 }
 #colors li .color1 {
@@ -520,8 +537,8 @@ img {
 }
 #colors li .color2 {
     background-color: #FFF;
-    width: 33px;
-    height: 23px;
+    width: 100%;
+    height: 25px;
     border: 1px #d7d7d7 solid;
 }
 #colors li .color3 {
@@ -548,6 +565,12 @@ img {
 #colors li .color10 {
     background-color: #59ad42;
 }
+@media (max-width: 800px) {
+    #colors {text-align: center;}
+    #colors li {display: inline-block; float: none;}
+}
+
+
 #gallery {
     position: relative;
     float: left;
@@ -659,6 +682,17 @@ img {
 #othersl .styled-select select {
     width: 220px;
 }
+@media (max-width: 1024px) {
+    .items-select                   { height: auto; text-align: center; padding-bottom: 15px;}
+    .items-select label             { float: none; display: inline-block; vertical-align: middle; width: 90%; text-align: left;}
+    .styled-select                  { display: inline-block; float: none; vertical-align: middle; margin-top: 0; width: 90%;}
+    .styled-select select           { width: 100%;}
+
+    #othersl                        { display: inline-block; vertical-align: middle; display: inline-block; width: 90%; margin-top: 15px;}
+    #othersl .styled-select         { width: 100%; margin: 0;}
+    #othersl .styled-select select  { width: 100%;}
+}
+
 .topitems {
     position: relative;
     float: left;
@@ -734,6 +768,20 @@ img {
     padding-right: 28px;
     color: #383838;
 }
+
+@media (max-width: 1024px) {
+    .topitems label                     { display: block; width: 100%; margin-bottom: 15px;}
+    .topitems.show span                      { display: inline-block; float: none; width: 25%; margin: 0 -2px; padding-left: 5px;}
+
+    .topitems.show span input.checkbox,
+    .topitems.show span font,
+    .topitems.show span i                    { float: none; display: inline-block; vertical-align: middle; margin-top: 0; margin-bottom: 0;}
+}
+@media (max-width: 870px) {
+    .topitems.show span                      { display: inline-block; float: none; width: 50%; margin: 0 -2px; padding-left: 5px;}
+}
+
+
 #listitems {
     position: relative;
     float: left;
@@ -771,6 +819,21 @@ img {
 #listitems li .price font.price-old {
     text-decoration: line-through;
 }
+@media (max-width: 1024px) {
+    #listitems                  { width: 100%; margin-left: -2px; margin-right: -2px; float: none; display: inline-block; text-align: center;}
+    #listitems li               { display: inline-block; vertical-align: top; float: none; margin: 25px 10px; height: auto; text-align: left;}
+    #listitems li .price        { position: static; display: inline-block; margin-top: 10px;}
+    #listitems li .bvote        { position: static; display: inline-block; margin-top: 10px;}
+    #listitems li .bgname       { position: relative; display: inline-block; margin-top: 10px;}
+    #listitems li .freeship     { background-color: #fff; padding: 3px; border-radius: 3px; right: auto; left: 5px;}
+    #listitems li .freeship .i-ship { float: none; display: inline-block; vertical-align: middle;}
+    #listitems li .freeship label   { float: none; vertical-align: middle; display: inline-block;}
+
+
+}
+
+
+
 .discount {
     position: absolute;
     height: 35px;
@@ -1099,11 +1162,11 @@ img {
 }
 
 @media (max-width: 480px) {
-	#subscribe 				 { width: 100%;}
+	#subscribe 				 { width: 100%; margin-left: 0; margin-right: 0;}
 	#subscribe li input.text {width: 290px;}
 }
 @media (max-width: 400px) {
-	#linkun 				 { width: 100%;}
+	#linkun 				 { width: 100%; margin-left: 0; margin-right: 0;}
 }
 @media (max-width: 320px) {
 	#subscribe li input.text {width: 100%;} 
@@ -1275,6 +1338,17 @@ img {
     border-bottom-color: #EEE;
     border-width: 30px;
 }
+@media (max-width: 1024px) {
+    .salepopup          { width: 150%; padding: 5px; left: -25%; right: -25%; margin-left: 0;} 
+    .salepopup .avatar  { float: none; display: block; margin: 10px auto;}
+    .salepopup .infosale {float: none; display: block; width: 100%; text-align: left;}
+    .salepopup .infosale .btnreg {width: 100%;}
+}
+
+
+
+
+
 .languagetop {
     position: absolute;
     width: 318px;
@@ -1638,7 +1712,6 @@ span.lesssort a.pricefilter {
     position: relative;
     float: left;
     width: 340px;
-    height: 120px;
     border: 10px #EEE solid;
     background-color: #FFF;
     margin: 20px 20px 0 0;
@@ -1648,7 +1721,7 @@ span.lesssort a.pricefilter {
     position: relative;
     float: left;
     width: 140px;
-    margin: 10px 14px 0 10px;
+    margin: 10px 14px 0 0;
     display: inline;
 }
 #listcoupon li .thumb .discount {
@@ -1657,7 +1730,7 @@ span.lesssort a.pricefilter {
 #listcoupon li .discountinfo {
     position: relative;
     float: left;
-    width: 175px;
+    width: 165px;
     margin: 10px 0 0 0;
 }
 #listcoupon li .discountinfo .rows {
@@ -2498,7 +2571,7 @@ img#pic {
     .items-recm    {width: 100%;}
     .items-recm ul {text-align: center;}
     .items-recm ul li  {float: none; display: inline-block; width: 200px;}
-    .recommended   {width: 75%;}
+    .recommended   {width: 100%;}
 }
 @media (max-width: 600px) {
     .recommended   {width: 100%;}
@@ -2584,19 +2657,13 @@ img#pic {
 }
 
         @media (max-width: 1024px) {
-            .popular-reveiew li  {margin: 10px 40px;}
+            .popular-reveiew li  {margin: 10px -2px; width: 50%; padding: 0 15px; vertical-align: top;}
         }
         @media (max-width: 1000px) {
             .country { float: none; display: block; clear: both;}
         }
-        @media (max-width: 800px) {
-            .popular-reveiew li  {margin: 10px 5px;}
-        }
-        @media (max-width: 720px) {
-            .popular-reveiew li  {margin: 10px 35px;}
-        }
         @media (max-width: 500px) {
-            .popular-reveiew li  {margin: 10px 5px;}
+            .popular-reveiew li  {width: 100%}
             .topreview span:first-child {display: block; float: none;}
         }
 
@@ -4019,6 +4086,9 @@ img#pic {
 	.listnew li 				{ float: none; display: inline-block;}
 	.items-coupon 				{ float: none; width: 50%; text-align: center; margin: 50px -2px 20px; display: inline-block;}
 	.items-coupon ul li      	{ display: inline-block; width: 210px; float: none;}
+
+    .items-coupon.list          { width: 100%;}
+    .items-coupon.list ul li    { width: 40%; margin: 15px;}
 }
 
 @media (max-width: 760px) {
@@ -4030,6 +4100,7 @@ img#pic {
 
 @media (max-width: 400px) {
 	.listnew li 				{ width: 100%; font-size: 14px;}
+    .items-coupon.list ul li    { width: 80%;}
 }
 
 

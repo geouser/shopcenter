@@ -355,15 +355,19 @@ height: 15px; /* limit height, needed for IE9 of all things */
 @media (max-width: 440px) {
 	#slider li .items 		{ width: 33.3%;}
 }
+#slider1    { width: 100%;}
 #slider1 li {  padding: 30px 0 0 0;}
-#slider1 li .itemspp{ position:relative; float:left; width:80px!important; margin:0 30px 0 0; display:inline; font-size: 11px; color: #999;}
-#slider1 li .itemspp .thumb{ position: relative; float: left; width: 100%;}
-#slider1 li .itemspp .infopeople{ position: relative; float: left; width: 100%;}
+#slider1 li.itemspp{ position:relative; float:left; display:inline-block; font-size: 11px; color: #999; text-align: center;}
+#slider1 li.itemspp .thumb{ position: relative; width: 100%; display: inline-block;}
+#slider1 li.itemspp .infopeople{ width: 100%; display: inline-block; text-align: left;}
+
+#slider1 li.itemspp .infopeople .icons.icon-status {position: static; display: inline-block;}
+
 #slider1 li a { padding: 0; display: inline-block;}
-#slider1 li .itemspp p{ padding: 5px 0 0 0;}
-#slider1 li .itemspp:nth-child(7n),#slider1 li .itemspp:first-child + li + li + li + li + li + li{ margin: 0;}
-.salepeople .anythingSlider-default .back{ left: 165px!important; }
-.salepeople .anythingSlider-default .forward{ left: 215px!important;}
+#slider1 li.itemspp p{ padding: 5px 5px 0;}
+#slider1 li.itemspp:nth-child(7n),#slider1 li .itemspp:first-child + li + li + li + li + li + li{ margin: 0;}
+.salepeople .slick-prev{ left: 165px!important; top: -7px;}
+.salepeople .slick-next{ left: 215px!important; top: -7px;}
 #slider2{ margin-top: 30px;}
 #slider2 li > img 	{width: 95%;}
 #slider2 li {  padding: 5px; display: inline-block; text-align: center;}
