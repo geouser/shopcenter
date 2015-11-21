@@ -2824,14 +2824,14 @@ img#pic {
 .bchat {
     position: relative;
     float: left;
-    width: 190px;
+    width: 100%;
     background-color: #EEE;
     padding: 10px;
     margin: 20px 0 0 0;
 }
 .bchat textarea {
     float: left;
-    width: 174px;
+    width: 100%;
     padding: 8px;
     background-color: #FFF;
     color: #999;
@@ -2858,7 +2858,7 @@ img#pic {
 .topcart {
     position: relative;
     float: left;
-    width: 690px;
+    width: 100%;
     margin: 20px 0 0 0;
     background-color: #EEE;
     font-size: 14px;
@@ -2932,6 +2932,7 @@ img#pic {
     margin: 0 0 0 20px;
     display: inline;
 }
+
 #itemcart li .code .grey {
     color: #999;
 }
@@ -3023,6 +3024,7 @@ img#pic {
     color: #ca4228!important;
     margin-top: 15px;
 }
+
 .couponcode {
     position: relative;
     float: left;
@@ -3076,6 +3078,45 @@ img#pic {
     color: #FFF;
     padding: 6px 30px 8px 30px;
 }
+
+
+    @media (max-width: 1000px) {
+        #itemcart li .code         {margin: 0;}
+        #itemcart li .thumb        {width: 20%; margin-right: 5%;}
+        #itemcart li .infoproduct  {width: 75%; float: right; margin: 0; margin-bottom: 10px;}
+        #itemcart li .infoproduct p {width: 80%;}
+        #itemcart li .thumb  img   {width: 100%;}
+        #itemcart li .numberoder .old  {padding-bottom: 10px;}
+
+        #itemcart li.total .right   {width: 28%;}
+        #itemcart li.total .left    {width: 70%;}
+        .couponcode                 {height: 80px;}
+        .couponcode label           {float: none; display: block; margin: 5px 0 0 20px; line-height: normal;}
+        .couponcode input.text      {margin: 5px 0 0 20px;}
+        .submitcode                 {margin: 6px 0 0 20px;}
+        .confirm .btnreg            {font-size: 34px;}
+    }
+    @media (max-width: 500px) {
+        #itemcart li .code         {margin: 0;}
+        #itemcart li .thumb        {width: 40%; float: none; display: block; margin: 10px 0;}
+        #itemcart li .infoproduct  {width: 100%; float: right; margin: 0; margin-bottom: 10px;}
+        #itemcart li .infoproduct p {width: 100%; font-weight: 700; font-size: 14px;}
+        #itemcart li .thumb  img    {width: 100%;}
+        #itemcart li .numberoder .old  {padding-bottom: 10px;}
+        #itemcart li.total .right      {font-size: 20px; width: 38%;}
+        #itemcart li.total .left       {width: 60%;}
+        .confirm .btnreg               {font-size: 28px; padding: 6px 5px 8px 5px; width: 300px;}
+        .couponcode input.text         {width: 60%;}
+    }
+    @media (max-width: 400px) {
+        #itemcart li .price            {float: none; display: block; margin: 5px 0;}
+        #itemcart li.total .left       {font-size: 16px;}
+        .confirm .btnreg               {font-size: 30px; padding: 6px 5px 8px 5px;}
+        .couponcode input.text         {width: 50%;}
+    }
+
+
+
 .i-note {
     float: left;
     width: 50px;
@@ -3097,6 +3138,7 @@ img#pic {
 #checkout-note a:hover {
     text-decoration: none;
 }
+
 .titleform {
     position: relative;
     float: left;
