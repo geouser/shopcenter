@@ -3465,6 +3465,20 @@ img#pic {
     line-height: 20px;
     font-size: 13px;
 }
+
+    @media (max-width: 800px) {
+        .subcate li   {width: 33%;}
+    }
+    @media (max-width: 500px) {
+        .subcate li   {width: 50%;} 
+    }
+    @media (max-width: 360px) {
+        .subcate li   {width: 95%; padding-left: 5%;}
+        .cateparent, .cateparent2  {width: 95%; padding-left: 5%;}
+    }
+
+
+
 .reginfo-rows {
     float: left;
     width: 100%;
