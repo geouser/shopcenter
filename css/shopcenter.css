@@ -182,6 +182,7 @@ body {
 		@media (max-width: 840px) {
 			.regacc  {font-size: 12px; margin-left: 3%; width: 240px;}
 			.btnreg  {padding: 6px 10px;}
+            .btnreg  {text-align: center;}
 		}
 		@media (max-width: 750px) {
 			.btnreg  {display: block; margin: 2px 0 0 0;}
@@ -3219,6 +3220,7 @@ img#pic {
     color: #ca4228;
     margin: 8px 0 0 0;
 }
+
 .i-wrn {
     width: 16px;
     height: 16px;
@@ -3255,10 +3257,10 @@ img#pic {
     height: 32px;
 }
 #country .styled-select {
-    width: 275px;
+    width: 265px;
     height: 32px;
     margin: 0 5px 0 0;
-    display: inline;
+    display: inline-block;
 }
 #country .styled-select select {
     width: 300px;
@@ -3266,6 +3268,23 @@ img#pic {
     border-top: 0;
     height: 32px;
 }
+
+    @media (max-width: 800px) {
+            .bgform li .control textarea  {width: 98%;}
+    }
+    @media (max-width: 500px) {
+        .bgform li .control   {margin: 10px auto; width: 100%;}
+        .bgform li .option-left   {float: none; margin: 5px auto;}
+        .bgform li .option-right  {width: 100%; margin: 0;}
+        .bgform li                {margin-top: 20px;}
+        .bgform li .control       {margin: 5px 0; width: 100%; text-align: center;}
+        #country .styled-select   {width: 90%; padding: 0 4%;}
+        #country .styled-select select  {width: 100%; }
+        .bgform li .control .textcheck  {float: none; display: inline-block; width: 90% !important;}
+        .bgform li .control-left        {text-align: left;}
+    }
+
+
 .rows-check {
     float: left;
     width: 100%;
@@ -3292,7 +3311,8 @@ img#pic {
     background-color: #e85c41;
 }
 .warning-end p {
-    line-height: 50px;
+    line-height: normal;
+    padding-top: 18px;
 }
 .order-row1 {
     float: left;
@@ -3429,7 +3449,9 @@ img#pic {
             .sortdes .clumnleft>img,
             .sortdes .clumnright>img {display: block; margin: 10px auto;}
         }
-
+        @media (max-width: 400px) {
+             .warning-end p {padding-top: 8px;}
+        }
 
 .article .popular-reveiew p {
     line-height: normal;
