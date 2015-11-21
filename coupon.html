@@ -9,17 +9,102 @@
 <link rel="stylesheet" type="text/css" href="css/anythingslider.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
 <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="js/jquery.anythingslider.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="js/base.js"></script>
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
 <script type="text/javascript" src="js/jquery.countdown-ru.js"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
-		$('#slider').anythingSlider();
-		$('#slider1').anythingSlider();
-		$('#couponlist').anythingSlider({
-			buildNavigation     : true,
-			buildArrows         : false,
+		$('#slider').slick({
+			  adaptiveHeight: false,
+		      autoplay: false,
+		      autoplaySpeed: 12000,
+		      arrows: true,
+		      dots: false,
+		      fade: false,
+		      infinite: true,
+		      initialSlide: 1,
+		      pauseOnHover: true,
+		      slidesToShow: 1,
+		      slidesToScroll: 1,
+		      slide: 'li',
+		      speed: 1000,
+		      touchMove: true,
+		      useCSS: true,
+		      responsive: [
+		        {
+		          breakpoint: 1024,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 800,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 400,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1
+		          }
+		        }
+		        // You can unslick at a given breakpoint now by adding:
+		        // settings: "unslick"
+		        // instead of a settings object
+		      ]
+		});
+		$('#slider1').slick({
+			  adaptiveHeight: false,
+		      autoplay: false,
+		      autoplaySpeed: 12000,
+		      arrows: true,
+		      dots: false,
+		      fade: false,
+		      infinite: true,
+		      initialSlide: 1,
+		      pauseOnHover: true,
+		      slidesToShow: 2,
+		      slidesToScroll: 1,
+		      slide: '.itemcoupon',
+		      speed: 1000,
+		      touchMove: true,
+		      useCSS: true,
+		      responsive: [
+		        {
+		          breakpoint: 1024,
+		          settings: {
+		            slidesToShow: 2,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 800,
+		          settings: {
+		            slidesToShow: 2,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 650,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1
+		          }
+		        }
+		        // You can unslick at a given breakpoint now by adding:
+		        // settings: "unslick"
+		        // instead of a settings object
+		      ]
+		});
+		$('#couponlist').slick({
+			arrows: false,
+            dots: true
 		});
 	})
 </script>
@@ -259,8 +344,9 @@ $(function () {
 				<input type="text" class="text" placeholder="Поиск в магазине" name="">
 				<a class="icons btnsl" href="#"></a>
 			</div>
-			<h3 class="margintop">Related Categories</h3>
+			
 			<ul id="categories">
+				<h3 class="margintop">Related Categories</h3>
 				<li class="parent">Men</li>
 				<li><a href="#">Accessories </a>(165510)</li>
 				<li><a href="#">Coats &amp; Jackets </a>(165510)</li>
@@ -310,7 +396,7 @@ $(function () {
 				Вы смотрели
 			</div>
 			<div id="gallery">
-				<ul id="slider">
+				<ul id="slider" class="coupons-page">
 					<li>
 						<div class="items">
 							<div class="discount"><i class="icons i-after"></i> -80%</div>
@@ -659,7 +745,7 @@ $(function () {
                 </div>
                 <div class="cp-map">
                 	<span class="title-map">Eagle Health and Wellness</span>
-                    <div class="map"><img src="images/article/map.jpg" /></div>
+                    <div class="map" id="map-canvas" lat="42.326674" long="-82.979299"></div>
                     <p>868 E Riverside Dr., Suite 200 Израиль, Иерусалим, 83616 </p>
                     <p>(208) 938-4040</p>
                     <p><a href="#">Get Directions &rarr;</a></p>
@@ -737,8 +823,7 @@ $(function () {
             <div class="couponslide-bottom">
 				<h1>Рекомендуем</h1>
 				<ul id="slider1">
-					<li>
-						<div class="itemcoupon">
+						<li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -755,8 +840,8 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="itemcoupon">
+                        </li>
+                        <li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -773,8 +858,8 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="itemcoupon">
+                        </li>
+                        <li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -791,8 +876,8 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="itemcoupon">
+                        </li>
+                        <li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -809,10 +894,8 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-					</li>
-                    <li>
-						<div class="itemcoupon">
+                        </li>
+						<li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -829,8 +912,8 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="itemcoupon">
+                        </li>
+                        <li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -847,8 +930,8 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="itemcoupon">
+                        </li>
+                        <li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -865,8 +948,8 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="itemcoupon">
+                        </li>
+                        <li class="itemcoupon">
                             <div class="thumb">
                                 <a href="#"><img alt="" src="images/products/pr6.jpg"></a>
                                 <div class="discount"><i class="icons i-after"></i> -35%</div>
@@ -883,8 +966,7 @@ $(function () {
                                     <div class="countdowntext">21:18:41 </div>
                                 </div>
                             </div>
-                        </div>
-					</li>
+                        </li>
 				</ul>
 			</div>
 		</div>

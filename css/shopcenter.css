@@ -1671,7 +1671,7 @@ img {
 .btnbuy {
     position: absolute;
     right: 10px;
-    top: 12px;
+    top: 15px;
     background-color: #e85c41;
     border-radius: 3px 0px 0px 3px;
     font-size: 20px;
@@ -1951,11 +1951,11 @@ span.lesssort a.pricefilter {
 @media (max-width: 800px) {
     .shopinfo                           { width: 100%;}
 
-    .sale-left                          { width: 50%; text-align: left; margin-top: 15px;}
-    .sale-left .avatar                  { display: inline-block; vertical-align: middle; float: none; margin-right: 10px;}
+    .sale-left                          { width: 50%; text-align: left; margin-top: 15px; float: none; display: block; margin-top: 15px;}
+    .sale-left .avatar                  { display: inline-block; vertical-align: middle; float: none; margin-right: 10px; margin-top: 15px;}
     .saleinfo                           { display: inline-block; vertical-align: middle; float: none;}
 
-    #searchleft                         { width: 100%;}
+    #searchleft                         { width: 100%; float: none; display: block;}
     #sidebar h3.spacer                  { display: none;}
 }
 
@@ -3833,10 +3833,22 @@ img#pic {
 }
 .map {
     display: inline-block;
-    width: 188px;
+    width: 100%;
     height: 228px;
     border: 1px #cacaca solid;
 }
+
+@media (max-width: 1024px) {
+    .coupon-desc            { float: none; display: inline-block; width: 100%;}
+    .cp-details             { float: none; width: 100%; display: inline-block; margin-bottom: 25px;}
+    .cp-map                 { float: none; width: 100%;}
+}
+a[href^="http://maps.google.com/maps"] {display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc                           {display:none;}
+.gmnoprint div                         {background:none !important;}
 .couponslide-bottom {
     position: relative;
     float: left;

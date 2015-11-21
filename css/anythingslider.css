@@ -403,9 +403,11 @@ z-index:0;
 width: 0; height: 0; border: solid transparent; border-color: rgba(255, 255, 255, 0); border-bottom-color: #EEE; border-width: 15px;
 }
 #coupon-one{ position:relative; float:left; width:100%; margin:25px 0 0 0;}
-#couponlist li .coupon-prd{ position: relative; float: left; width: 706px!important; height:246px!important; background-color: #FFF; border:17px #EEE solid;}
+#couponlist {width: 100%; height: auto;}
+#couponlist li {display: inline-block; height: auto;}
+#couponlist li .coupon-prd{ position: relative; float: left; width: 100%; height:auto; background-color: #FFF; border:17px #EEE solid;}
 .couponid{ position:relative; float:left; color:#999; padding-bottom:5px;}
-#couponlist li .thumb-cp{ position: relative; float: left; width: 300px; height: 225px; z-index: 99; padding: 10px;}
+#couponlist li .thumb-cp{ position: relative; float: left; width: 300px; height: auto; z-index: 99; padding: 10px;}
 #couponlist li.thumb-cp img{ position: relative; float: left; width: 100%;}
 #couponlist li .thumb-cp .discount{ right:0px; top: 2px;}
 #couponlist li.couponinfo{ position: relative; float: left; width: 360px; margin: 15px 0 0 10px; display: inline; font-size: 14px; color: #999;}
@@ -425,8 +427,8 @@ width: 0; height: 0; border: solid transparent; border-color: rgba(255, 255, 255
 #couponlist li .bottom-cp .price-cp span .price2{ font-size: 22px; line-height: 25px;}
 #couponlist li .bottom-cp .price-cp span.small{padding-top: 15px;}
 #couponlist li .btnbuy{ right:5px;}
-#coupon-one .anythingSlider-default .anythingControls{ background:#e85c41;padding:8px 8px; bottom:-2px; left:98px;opacity:1; margin:0; height:auto; right:auto;}
-#coupon-one .anythingSlider-default .anythingControls:after{
+#couponlist .slick-dots   { background:#e85c41; padding:8px 8px; bottom:-7px; left:98px;opacity:1; margin:0; height:auto; right:auto; position: absolute;}
+#couponlist .slick-dots:after{
 content:'';
 position:absolute;
 bottom:0;
@@ -436,25 +438,47 @@ height: 0px;
 border-style: solid;
 border-width: 0 8px 8px 0;
 border-color: transparent #954332 transparent transparent;}
-#coupon-one .anythingSlider-default .anythingControls ul a{width:15px; height:15px; background-color:#FFF; border-radius:8px; box-shadow:1px 4px 0px #be4b35;}
-#coupon-one .anythingSlider-default .anythingControls ul a.cur{ background-color:#383838; box-shadow:0px 4px 0px #010101 inset;}
+#couponlist .slick-dots li button  {width:15px; height:15px; background-color:#FFF; border-radius:8px; box-shadow:1px 4px 0px #be4b35; color: transparent; border: none; cursor: pointer; margin: 0 2px;}
+#couponlist .slick-dots li.slick-active button { background-color:#383838; box-shadow:0px 4px 0px #010101 inset;}
+@media (max-width: 1024px) {
+	#couponlist li .thumb-cp {width: 40%; float: none; display: inline-block; margin-left: -2px; margin-right: -2px;}
+	#couponlist li .bottom-cp {position: relative; display: inline-block;}
+	#couponlist li .bottom-cp .price-cp {float: none; display: inline-block; padding-left: 15px; text-align: left;}
+}
+@media (max-width: 500px) {
+	#couponlist li .thumb-cp {display: block; margin-left: auto; margin-right: auto; width: 270px;}
+	.countdown-social 				{width: 100%; text-align: center;}
+	.countdown-social span 		{ float: none; display: inline-block; vertical-align: middle; margin: 5px;}
+}
+@media (max-width: 420px) {
+	#couponlist li .bottom-cp {height: auto; padding-bottom: 20px;}
+	#couponlist .slick-dots {right: 17px; left: auto;}
+}
+
+
+
 
 /*----------coupon-slide-bottom-----------*/
-.couponslide-bottom #slider1{ height:320px;}
-.couponslide-bottom .anythingSlider-default .back{ left: 165px!important; }
-.couponslide-bottom .anythingSlider-default .forward{ left: 215px!important;}
-#slider1 li .itemcoupon{ position: relative; float: left; width:340px!important; height: 120px!important; border:10px #EEE solid; background-color: #FFF; margin:0px 20px 0 0; display: inline;}
-#slider1 li .itemcoupon .thumb{ position: relative; float: left; width: 140px; margin: 10px 14px 0 10px; display: inline;}
-#slider1 li .itemcoupon .thumb .discount{ right: 0;}
-#slider1 li .itemcoupon .discountinfo{ position: relative; float: left; width: 175px; margin: 10px 0 0 0;}
-#slider1 li .itemcoupon .discountinfo .rows{ position: relative; width: 100%; padding: 5px 0 0 0; display: inline-block;}
-#slider1 li .itemcoupon .discountinfo .rows font{ display: inline-block; vertical-align: middle;}
-#slider1 li .itemcoupon .discountinfo .rows font.old{ font-size: 11px; color: #999; text-decoration: line-through;}
-#slider1 li .itemcoupon .discountinfo .rows font.number{ font-size:20px; color: #ca4228;}
-#slider1 li .itemcoupon .discountinfo .rows label{ float: left; color: #999; padding-left: 15px;}
-#slider1 li .itemcoupon .discountinfo .rows .i-clock{ position: absolute; width: 16px; height: 16px; background-position: 0px -252px; left: -4px; top: 6px;}
-#slider1 li .itemcoupon .discountinfo .rows .countdowntext{ float: right; font-size: 14px; letter-spacing: -1px; padding-right: 10px;}
-#slider1 li .itemcoupon:nth-child(2n){ margin-right:0px;}
+.couponslide-bottom #slider1{ height:auto; width: 100%; padding-top: 25px;}
+.couponslide-bottom #slider1 .slick-prev { left: 175px; top: -5px;}
+.couponslide-bottom #slider1 .slick-next { left: 225px; top: -5px;}
+#slider1 li.itemcoupon{ position: relative; display: inline-block; height: auto; border:10px #EEE solid; background-color: #FFF; margin:0 5px; padding: 0;}
+#slider1 li.itemcoupon .thumb{ position: relative; display: inline-block; vertical-align: middle; width: 40%; margin: 10px -2px 0 -2px;}
+#slider1 li.itemcoupon .thumb a {width: 100%;}
+#slider1 li.itemcoupon .thumb a img {width: 100%;}
+#slider1 li.itemcoupon .thumb .discount{ right: 0;}
+#slider1 li.itemcoupon .discountinfo{ position: relative; display: inline-block; vertical-align: middle; width: 60%; padding: 0 0 0 13px; margin: 0 -2px;}
+#slider1 li.itemcoupon .discountinfo .rows{ position: relative; width: 100%; padding: 5px 0 0 0; display: inline-block;}
+#slider1 li.itemcoupon .discountinfo .rows font{ display: inline-block; vertical-align: middle;}
+#slider1 li.itemcoupon .discountinfo .rows font.old{ font-size: 11px; color: #999; text-decoration: line-through;}
+#slider1 li.itemcoupon .discountinfo .rows font.number{ font-size:20px; color: #ca4228;}
+#slider1 li.itemcoupon .discountinfo .rows label{ float: left; color: #999; padding-left: 15px;}
+#slider1 li.itemcoupon .discountinfo .rows .i-clock{ position: absolute; width: 16px; height: 16px; background-position: 0px -252px; left: -4px; top: 6px;}
+#slider1 li.itemcoupon .discountinfo .rows .countdowntext{ float: right; font-size: 14px; letter-spacing: -1px; padding-right: 10px;}
+@media (max-width: 500px) {
+	#slider1 li.itemcoupon .thumb {width: 35%; margin-top: 0;}
+	#slider1 li.itemcoupon .discountinfo {width: 65%; padding: 5px 0  5px 10px;}
+}
 /*----------slide-var-------*/
 
 

@@ -149,6 +149,33 @@ if (device) {
 		  $(this).children('.listHolder').css('left', '-9999px');
 		  $(this).children('a').css({'background-color': 'transparent', 'color': '#4b8ab6', 'padding-left': '0'});
 		});
-} else {console.log("not device");};
+};
+
+function googleMap_initialize() {
+  var lat = $('#map-canvas').attr('lat');
+  var long = $('#map-canvas').attr('long');
+  var mapCenterCoord = new google.maps.LatLng(lat, long);
+  var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+  var mapOptions = {
+    center: mapCenterCoord,
+    zoom: 17,
+    //draggable: false,
+    disableDefaultUI: true,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  var marker = new google.maps.Marker({
+    position: mapMarkerCoord, 
+    map: map
+  });
+  $(window).resize(function (){
+    map.setCenter(mapCenterCoord);
+  });
+};
+
+googleMap_initialize();
 
 })
