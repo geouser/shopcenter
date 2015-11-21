@@ -182,6 +182,7 @@ body {
 		@media (max-width: 840px) {
 			.regacc  {font-size: 12px; margin-left: 3%; width: 240px;}
 			.btnreg  {padding: 6px 10px;}
+            .btnreg  {text-align: center;}
 		}
 		@media (max-width: 750px) {
 			.btnreg  {display: block; margin: 2px 0 0 0;}
@@ -2824,14 +2825,14 @@ img#pic {
 .bchat {
     position: relative;
     float: left;
-    width: 190px;
+    width: 100%;
     background-color: #EEE;
     padding: 10px;
     margin: 20px 0 0 0;
 }
 .bchat textarea {
     float: left;
-    width: 174px;
+    width: 100%;
     padding: 8px;
     background-color: #FFF;
     color: #999;
@@ -2858,7 +2859,7 @@ img#pic {
 .topcart {
     position: relative;
     float: left;
-    width: 690px;
+    width: 100%;
     margin: 20px 0 0 0;
     background-color: #EEE;
     font-size: 14px;
@@ -2932,6 +2933,7 @@ img#pic {
     margin: 0 0 0 20px;
     display: inline;
 }
+
 #itemcart li .code .grey {
     color: #999;
 }
@@ -3023,6 +3025,7 @@ img#pic {
     color: #ca4228!important;
     margin-top: 15px;
 }
+
 .couponcode {
     position: relative;
     float: left;
@@ -3076,6 +3079,45 @@ img#pic {
     color: #FFF;
     padding: 6px 30px 8px 30px;
 }
+
+
+    @media (max-width: 1000px) {
+        #itemcart li .code         {margin: 0;}
+        #itemcart li .thumb        {width: 20%; margin-right: 5%;}
+        #itemcart li .infoproduct  {width: 75%; float: right; margin: 0; margin-bottom: 10px;}
+        #itemcart li .infoproduct p {width: 80%;}
+        #itemcart li .thumb  img   {width: 100%;}
+        #itemcart li .numberoder .old  {padding-bottom: 10px;}
+
+        #itemcart li.total .right   {width: 28%;}
+        #itemcart li.total .left    {width: 70%;}
+        .couponcode                 {height: 80px;}
+        .couponcode label           {float: none; display: block; margin: 5px 0 0 20px; line-height: normal;}
+        .couponcode input.text      {margin: 5px 0 0 20px;}
+        .submitcode                 {margin: 6px 0 0 20px;}
+        .confirm .btnreg            {font-size: 34px;}
+    }
+    @media (max-width: 500px) {
+        #itemcart li .code         {margin: 0;}
+        #itemcart li .thumb        {width: 40%; float: none; display: block; margin: 10px 0;}
+        #itemcart li .infoproduct  {width: 100%; float: right; margin: 0; margin-bottom: 10px;}
+        #itemcart li .infoproduct p {width: 100%; font-weight: 700; font-size: 14px;}
+        #itemcart li .thumb  img    {width: 100%;}
+        #itemcart li .numberoder .old  {padding-bottom: 10px;}
+        #itemcart li.total .right      {font-size: 20px; width: 38%;}
+        #itemcart li.total .left       {width: 60%;}
+        .confirm .btnreg               {font-size: 28px; padding: 6px 5px 8px 5px; width: 300px;}
+        .couponcode input.text         {width: 60%;}
+    }
+    @media (max-width: 400px) {
+        #itemcart li .price            {float: none; display: block; margin: 5px 0;}
+        #itemcart li.total .left       {font-size: 16px;}
+        .confirm .btnreg               {font-size: 30px; padding: 6px 5px 8px 5px;}
+        .couponcode input.text         {width: 50%;}
+    }
+
+
+
 .i-note {
     float: left;
     width: 50px;
@@ -3097,6 +3139,7 @@ img#pic {
 #checkout-note a:hover {
     text-decoration: none;
 }
+
 .titleform {
     position: relative;
     float: left;
@@ -3177,6 +3220,7 @@ img#pic {
     color: #ca4228;
     margin: 8px 0 0 0;
 }
+
 .i-wrn {
     width: 16px;
     height: 16px;
@@ -3213,10 +3257,10 @@ img#pic {
     height: 32px;
 }
 #country .styled-select {
-    width: 275px;
+    width: 265px;
     height: 32px;
     margin: 0 5px 0 0;
-    display: inline;
+    display: inline-block;
 }
 #country .styled-select select {
     width: 300px;
@@ -3224,6 +3268,23 @@ img#pic {
     border-top: 0;
     height: 32px;
 }
+
+    @media (max-width: 800px) {
+            .bgform li .control textarea  {width: 98%;}
+    }
+    @media (max-width: 500px) {
+        .bgform li .control   {margin: 10px auto; width: 100%;}
+        .bgform li .option-left   {float: none; margin: 5px auto;}
+        .bgform li .option-right  {width: 100%; margin: 0;}
+        .bgform li                {margin-top: 20px;}
+        .bgform li .control       {margin: 5px 0; width: 100%; text-align: center;}
+        #country .styled-select   {width: 90%; padding: 0 4%;}
+        #country .styled-select select  {width: 100%; }
+        .bgform li .control .textcheck  {float: none; display: inline-block; width: 90% !important;}
+        .bgform li .control-left        {text-align: left;}
+    }
+
+
 .rows-check {
     float: left;
     width: 100%;
@@ -3250,7 +3311,8 @@ img#pic {
     background-color: #e85c41;
 }
 .warning-end p {
-    line-height: 50px;
+    line-height: normal;
+    padding-top: 18px;
 }
 .order-row1 {
     float: left;
@@ -3387,7 +3449,9 @@ img#pic {
             .sortdes .clumnleft>img,
             .sortdes .clumnright>img {display: block; margin: 10px auto;}
         }
-
+        @media (max-width: 400px) {
+             .warning-end p {padding-top: 8px;}
+        }
 
 .article .popular-reveiew p {
     line-height: normal;
@@ -3423,6 +3487,20 @@ img#pic {
     line-height: 20px;
     font-size: 13px;
 }
+
+    @media (max-width: 800px) {
+        .subcate li   {width: 33%;}
+    }
+    @media (max-width: 500px) {
+        .subcate li   {width: 50%;} 
+    }
+    @media (max-width: 360px) {
+        .subcate li   {width: 95%; padding-left: 5%;}
+        .cateparent, .cateparent2  {width: 95%; padding-left: 5%;}
+    }
+
+
+
 .reginfo-rows {
     float: left;
     width: 100%;
