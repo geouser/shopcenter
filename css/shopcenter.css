@@ -4017,6 +4017,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     position: relative;
     float: right;
     width: 740px;
+    overflow: hidden;
+    padding-bottom: 15px;
     margin: 12px 0 0 0;
 }
 
