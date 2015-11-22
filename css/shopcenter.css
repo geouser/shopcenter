@@ -1164,7 +1164,8 @@ img {
 								display: inline-block;
 								vertical-align: top;
 								margin: 0 -2px;
-								float: none;}
+								float: none;
+                                padding: 0 2px;}
 	#subscribe li input.text { float: none; width: 100%;}
 }
 @media (max-width: 800px) {
@@ -3389,6 +3390,17 @@ img#pic {
 .shopinfoin .white {
     color: #FFF;
 }
+
+@media (max-width: 500px) {
+    .order-row1 .clumn1 {width: 65%; padding-right: 5px;}
+    .order-row1 .clumn2 { width: 15%;}
+    .order-row2 .clumn1 { width: 100%;}
+    .bottom-order .btnreg {width: 100%;}
+}
+
+
+
+
 .article {
     position: relative;
     float: left;
