@@ -11,19 +11,111 @@
 <link rel="stylesheet" type="text/css" href="css/company.css">
 <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/jquery.anythingslider.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/base.js"></script>
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
 <script type="text/javascript" src="js/jquery.countdown-ru.js"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
-		$('#slider').anythingSlider();
-		$('#slider1').anythingSlider();
-		$('#slideimage').anythingSlider({
-			buildNavigation     : true,
-			buildArrows         : false,
-			autoPlay            : true
+		$('#slider').slick({
+			  adaptiveHeight: false,
+		      autoplay: false,
+		      autoplaySpeed: 12000,
+		      arrows: true,
+		      dots: false,
+		      fade: false,
+		      infinite: true,
+		      initialSlide: 1,
+		      pauseOnHover: true,
+		      slidesToShow: 1,
+		      slidesToScroll: 1,
+		      slide: 'li',
+		      speed: 1000,
+		      touchMove: true,
+		      useCSS: true,
+		      responsive: [
+		        {
+		          breakpoint: 1024,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 800,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 400,
+		          settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1
+		          }
+		        }
+		        // You can unslick at a given breakpoint now by adding:
+		        // settings: "unslick"
+		        // instead of a settings object
+		      ]
 		});
-		$('#bestproduct').anythingSlider();
+		$('#slider1').anythingSlider();
+		$('#slideimage').slick({
+			arrows: false,
+            dots: true
+		});
+		$('#bestproduct').slick({
+			adaptiveHeight: true,
+		    autoplay: false,
+		    autoplaySpeed: 12000,
+		    arrows: true,
+		    dots: false,
+		    fade: false,
+		    infinite: true,
+		    initialSlide: 1,
+		    pauseOnHover: true,
+		    slidesToShow: 4,
+		    slidesToScroll: 2,
+		    slide: 'li',
+		    speed: 1000,
+		    touchMove: true,
+		    useCSS: true,
+		    responsive: [
+		        {
+		          breakpoint: 1024,
+		          settings: {
+		            slidesToShow: 4,
+		            slidesToScroll: 1,
+		          }
+		        },
+		        {
+		          breakpoint: 800,
+		          settings: {
+		            slidesToShow: 4,
+		            slidesToScroll: 2
+		          }
+		        },
+		        {
+		          breakpoint: 650,
+		          settings: {
+		            slidesToShow: 3,
+		            slidesToScroll: 1
+		          }
+		        },
+		        {
+		          breakpoint: 500,
+		          settings: {
+		            slidesToShow: 2,
+		            slidesToScroll: 2,
+		            adaptiveHeight: true
+		          }
+		        }
+		        // You can unslick at a given breakpoint now by adding:
+		        // settings: "unslick"
+		        // instead of a settings object
+		      ]
+		});
 	})
 </script>
 <script type="text/javascript">
@@ -44,11 +136,13 @@ $(function () {
 
 <body>
 <div id="mainpage">
-	<div id="top">
+	<div id="top" class="cmpn">
 		<div class="container">
-			<span><i class="icons i-company"></i><a href="#" class="company">Центр покупок</a></span>
-			<span><i class="icons i-questinon"></i><a href="#">Задать вопрос</a></span>
-			<span><i class="icons i-customer"></i><a href="#">Защита потребителя</a></span>
+			<div class="wrap">
+				<span class="cmpn-logo"><i class="icons i-company"></i><a href="#" class="company">Центр покупок</a></span>
+				<span><i class="icons i-questinon"></i><a href="#">Задать вопрос</a></span>
+				<span><i class="icons i-customer"></i><a href="#">Защита потребителя</a></span>
+			</div>
             <span class="cart-none"><i class="icons i-cart"></i><a href="#">Корзина</a></span>
 			<span class="reg"><i class="icons i-reg"></i><a href="#">Войти на сайт</a> <font>|</font><a href="#">Войти на сайт</a></span>
 		</div>
@@ -56,13 +150,15 @@ $(function () {
 </div>
 <div class="container">
 	<div id="company-header">
-    	<a href="#" id="company-logo"><img src="images/products/logo-company.jpg" alt="" /></a>
-        <div id="company-info">
-        	<span class="company-name">Dian chou bracelet's store</span>
-            <p><font class="cpn-no">Store No.202435</font></p>
-            <p>Израиль, Иерусалим</p>
-            <p class="end"><i class="icons icon-cmt"></i> 96.3% <a href="#">positive feedback</a></p>
-        </div>
+		<div class="wrap">
+			<a href="#" id="company-logo"><img src="images/products/logo-company.jpg" alt="" /></a>
+	        <div id="company-info">
+	        	<span class="company-name">Dian chou bracelet's store</span>
+	            <p><font class="cpn-no">Store No.202435</font></p>
+	            <p>Израиль, Иерусалим</p>
+	            <p class="end"><i class="icons icon-cmt"></i> 96.3% <a href="#">positive feedback</a></p>
+	        </div>	
+		</div>
         <div class="company-search">
         	<div class="bgsearch">
                 <input type="text" name="" placeholder="Поиск в магазине" class="text">
@@ -165,7 +261,7 @@ $(function () {
 				Вы смотрели
 			</div>
             <div id="gallery">
-				<ul id="slider">
+				<ul id="slider" class="coupons-page">
 					<li>
 						<div class="items"><a href-"#"><img src="images/gallery/gl1.jpg" alt=""></a></div>
 						<div class="items"><a href-"#"><img src="images/gallery/gl2.jpg" alt=""></a></div>
@@ -381,74 +477,68 @@ $(function () {
                 </div>
             </div>
             <div id="bestprice-cpn">
-            	<div id="bestprice">
+            	<div id="bestprice" class="company-page">
                     <h3>Выгодные предложения</h3>
                     <ul id="bestproduct">
-                        <li>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                            </div>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
                         </li>
-                        <li>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                            </div>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
                         </li>
-                        <li>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
-                            </div>
-                            <div class="clumn-best">
-                                <div class="discount"><i class="icons i-after"></i> 30%</div>
-                                <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
-                                <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
-                            </div>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 30%</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr12.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Лесть из кожи Ликвидация! Торопитесь!</a>
+                        </li>
+                        <li class="clumn-best">
+                            <div class="discount"><i class="icons i-after"></i> 30%</div>
+                            <a href="#"><img src="images/products/pr13.jpg" alt="" class="thumb" /></a>
+                            <a href="#" class="name">Кожанные сумки Скидки от 20%</a>
                         </li>
                     </ul>
                 </div>

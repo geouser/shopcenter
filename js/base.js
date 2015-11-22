@@ -176,6 +176,9 @@ function googleMap_initialize() {
   });
 };
 
-googleMap_initialize();
+	if ($('#map-canvas').length > 0) {
+		googleMap_initialize();
+	};
+
 
 })
