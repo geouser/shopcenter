@@ -2132,8 +2132,8 @@ span.lesssort a.pricefilter {
     .galleryprd                     { width: 100%; display: inline-block; float: none;}
     .imagelib                       { text-align: center;}
     .imgout                         { display: inline-block; max-width: 100%;}
-    .allthumb                       { text-align: left; margin-top: 20px;}
-    .allthumb li                    { display: inline-block; float: none; margin: 0 3px;}
+    .allthumb                       { text-align: center; margin-top: 10px;}
+    .allthumb li                    { display: inline-block; float: none; margin: 5px 3px 0 !important;}
 }
 
 
@@ -2451,6 +2451,7 @@ span.lesssort a.pricefilter {
 }
 .desc p {
     padding: 15px 0 0 0;
+    margin-bottom: 5px;
 }
 .desc table {
     padding: 25px 0 0 0;
