@@ -423,8 +423,8 @@ img {
             #sidebar                       {width: 20%; margin-right: 2%;}
             .contentreview                 {width: 100%; padding: 10% 8%;}
             #gallery #slider               { padding-top: 55px;}
-            #gallery #slider .slick-next   {top: 60px; right: 20%;} 
-            #gallery #slider .slick-prev   {top: 60px; left: 20%;} 
+            #gallery #slider .slick-next   {top: 0; right: 20%;} 
+            #gallery #slider .slick-prev   {top: 0; left: 20%;} 
             #gallery #slider.coupons-page .slick-next {top: -5px; left: 55px;}
             #gallery #slider.coupons-page .slick-prev {top: -5px; left: 0px;}
         }
@@ -3858,10 +3858,13 @@ img#pic {
     top: -25px;
     right: -80px;
     z-index: 0;
+        -moz-box-shadow: inset 0 0 10px #fff;
+    -webkit-box-shadow: inset 0 0 10px #fff;
+     box-shadow: inset 0 0 20px #fff;
 } 
 
         @media (max-width: 1024px) {
-            .bannertext    {right: 0; width: 70%; height: 380px;}
+            .bannertext    {right: 0; width: 70%; height: 380px; top: 0;}
         }
          @media (max-width: 600px) {
             .bannertext    {display: none;}
