@@ -324,7 +324,7 @@ height: 15px; /* limit height, needed for IE9 of all things */
 	-moz-transition-duration: 0;
 	-webkit-transition-duration: 0;
 }
-#slider 			{ width: 100%;}
+#slider 			{ width: 100%; overflow: hidden;}
 #slider li 			{ display: inline-block; text-align: center;}
 #slider li .items{ position:relative; width:100px; margin: 10px 5px 0 0; display:inline-block; margin: 0 2px;}
 #slider li .items:nth-child(2n), #slider ul li .items:first-child + .items{ margin-right:0;}
