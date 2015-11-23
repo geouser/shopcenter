@@ -441,9 +441,10 @@ img {
             #categories                             { text-align: center;}
             #categories li         {font-size: 15px; display: inline-block; width: auto; float: none;
                                    width: 45%; margin: 5px; padding: 5px;
+                                   border: 1px solid #DFDFDF;
                                    -webkit-border-radius: 4px;
-                                   -moz-border-radius: 4px;
-                                        border-radius: 4px;
+                                   -moz-border-radius: 6px;
+                                        border-radius: 6px;
                                 -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
                                    -moz-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
                                         box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
@@ -1265,9 +1266,10 @@ img {
     height: 38px;
     background: url(../images/arrowb.png) no-repeat right #EEE;
     margin: 0 0 0 1px;
+    overflow: hidden;
 }
 .bginput .styled-select select {
-    width: 100%;
+    width: 120%;
     padding: 8px 0 7px 5px;
     height: 38px;
     font-size: 12px;
@@ -1282,7 +1284,7 @@ img {
 				                              -o-background-size: 7%;
 				                                 background-size: 7%;
 				                         }
-				.bginput .styled-select select {font-size: 11px;}
+				.bginput .styled-select select {font-size: 11px; width: 100%;}
 			}
 			@media (max-width: 680px) {
 				.bginput .styled-select  {width: 136px;}
@@ -2605,7 +2607,7 @@ img#pic {
     position: relative;
     float: left;
     width: 100%;
-    margin: 20px 0 0 0;
+    margin: 20px 5px;
     color: #999;
 }
 .items-recm ul li p {
@@ -2624,16 +2626,19 @@ img#pic {
     #sidebar h2 {font-size: 24px;}
 }
 @media (max-width: 800px) {
-    #sidebar h2 {font-size: 22px;}
+    #sidebar h2    {font-size: 22px;}
     .items-recm    {width: 100%;}
     .items-recm ul {text-align: center;}
-    .items-recm ul li  {float: none; display: inline-block; width: 200px;}
+    .items-recm ul li  {float: none; display: inline-block; width: 200px; font-weight: 700; font-size: 14px;}
     .recommended   {width: 100%;}
 }
 @media (max-width: 600px) {
     .recommended   {width: 100%;}
 }
-
+@media (max-width: 500px) {
+    .recommended   {width: 100%; margin: 20px auto;}
+    .items-recm ul li {width: 100%;}
+}
 
 .alldeal {
     float: left;
@@ -2720,8 +2725,10 @@ img#pic {
             .country { float: none; display: block; clear: both;}
         }
         @media (max-width: 500px) {
-            .popular-reveiew li  {width: 100%}
             .topreview span:first-child {display: block; float: none;}
+        }
+         @media (max-width: 400px) {
+            .popular-reveiew li  {width: 100%}
         }
 
 .listreviews {
@@ -4301,7 +4308,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 
 @media (max-width: 400px) {
-	.listnew li 				{ width: 100%; font-size: 14px;}
+	.listnew li 				{ width: 100%; font-size: 14px; margin: 20px 0;}
     .items-coupon.list ul li    { width: 80%;}
 }
 
