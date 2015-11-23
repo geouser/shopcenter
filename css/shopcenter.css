@@ -423,8 +423,8 @@ img {
             #sidebar                       {width: 20%; margin-right: 2%;}
             .contentreview                 {width: 100%; padding: 10% 8%;}
             #gallery #slider               { padding-top: 55px;}
-            #gallery #slider .slick-next   {top: 0; right: 20%;} 
-            #gallery #slider .slick-prev   {top: 0; left: 20%;} 
+            #gallery #slider .slick-next   {top: 60px; right: 20%;} 
+            #gallery #slider .slick-prev   {top: 60px; left: 20%;} 
             #gallery #slider.coupons-page .slick-next {top: -5px; left: 55px;}
             #gallery #slider.coupons-page .slick-prev {top: -5px; left: 0px;}
         }
