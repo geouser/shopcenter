@@ -471,9 +471,13 @@ img {
     margin: 30px 0 0 0;
     font-size: 16px;
     padding-bottom: 10px;
+    padding-right: 30%;
+}
+@media (max-width: 1024px) {
+    .title-filter                   {padding-right: 0;}
 }
 @media (max-width: 800px) {
-    .title-filter                   {float: none; display: inline-block; padding-left: 15px;}
+    .title-filter                   {float: none; display: inline-block; padding-left: 15px; padding-left: 0;}
 }
 .title-filter a {
     font-size: 13px;
@@ -3826,6 +3830,7 @@ img#pic {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
+    margin-right: 0;
 }
 .iconstep img {
     vertical-align: middle;
