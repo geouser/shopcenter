@@ -3821,6 +3821,23 @@ img#pic {
     text-align: center;
     color: #FFF;
 }
+.iconstep:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.iconstep img {
+    vertical-align: middle;
+    max-width: 90%;
+    max-height: 90%;
+}
+.iconstep-info {
+    width: 98%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
 .icon-step1 {
     display: inline-block;
     width: 123px;
