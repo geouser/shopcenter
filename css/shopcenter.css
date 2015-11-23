@@ -1978,7 +1978,7 @@ span.lesssort a.pricefilter {
     .shopinfo .title                    { line-height: normal; padding: 5px;}
     #searchleft                         { width: 100%; border-width: 10px;}
     #searchleft input.text              { height: 100%;}
-    #searchleft .btnsl                  { margin: 6px 0 0; width: 15%; background-repeat: no-repeat; background-position: 100% 302px;}
+    #searchleft .btnsl                  { margin: 6px 0 0; width: 15%; background-repeat: no-repeat;}
 }
 @media (max-width: 800px) {
     .shopinfo                           { width: 100%;}
@@ -2874,6 +2874,7 @@ img#pic {
     background-color: #FFF;
     color: #999;
     border: 0;
+    resize: none;
 }
 .btnsubmit {
     float: left;
@@ -3239,6 +3240,19 @@ img#pic {
     color: #ca4228;
     line-height: 35px;
 }
+.bgform li .control input[type="radio"],
+.bgform li .control input[type="checkbox"],
+.bgform li .control label {vertical-align: middle;}
+.bgform li .control input[type="checkbox"],
+.bgform li .control input[type="radio"] {margin-top: 0;}
+@media (max-width: 700px) {
+    .bgform li .control .warning {
+        float: none; display: block; margin-left: 0;
+    }
+    .bgform li .control p {
+        text-align: left;
+    }
+}
 .bgform li .control .warning span {
     display: inline-block;
     vertical-align: middle;
@@ -3339,6 +3353,7 @@ img#pic {
 }
 .bgform textarea {
     border: 0;
+    resize: none;
 }
 .warning-end .topcart {
     background-color: #ffecec;
@@ -3451,7 +3466,9 @@ img#pic {
     padding-bottom: 18px;
 }
 .article h3 {
+    display: block;
     float: left;
+    width: 100%;
     font-size: 20px;
     font-weight: normal;
     padding: 30px 0 18px 0;
@@ -3469,6 +3486,15 @@ img#pic {
 .starvote span.articlelink {
     float: right;
     margin: 0;
+}
+@media (max-width: 480px) {
+    .starvote span {
+        float: none!important;
+        display: inline-block;
+    }
+    .starvote span.articlelink {
+        margin-top: 15px;
+    }
 }
 .sortdes {
     display: inline-block;

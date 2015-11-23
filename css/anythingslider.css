@@ -551,10 +551,13 @@ box-shadow: 0px 4px 0px #010101 inset;
 
 
 #bestproduct{width: 100%; height: auto; list-style: none; background-color: #EEE; text-align: center; padding-bottom: 15px;}
-#bestprice .anythingSlider-default .back,
+
+
 #bestprice .slick-prev						{ left: 40%; top:-60px;}
-#bestprice .anythingSlider-default .forward,
 #bestprice .slick-next 						{ left: 45%; top:-60px;}
+
+#bestproduct .slick-prev					{ left: 40%; top: -5px;}
+#bestproduct .slick-next 					{ left: 45%; top: -5px;}
 
 #bestprice.company-page .slick-prev 		{ left: 360px; top: 0px;}
 #bestprice.company-page .slick-next  		{ left: 420px; top: 0;}
@@ -566,10 +569,13 @@ box-shadow: 0px 4px 0px #010101 inset;
 #bestproduct li.clumn-best .name{ position:relative; float:left; padding:5px; font-size:14px; color:#FFF; text-align:center;}
 @media (max-width: 1024px) {
 	#bestproduct 				{ width: 100%;}
-	#bestprice .anythingSlider-default .back,
 	#bestprice .slick-prev						{ left: auto!important; top:-60px; right: 50px}
-	#bestprice .anythingSlider-default .forward,
 	#bestprice .slick-next 						{ left: auto!important; top:-60px; right: 0;}
+
+	#bestproduct .slick-prev					{ left: auto!important; top:-5px; right: 50px}
+	#bestproduct .slick-next 					{ left: auto!important; top:-5px; right: 0;}
+
+
 	#main-r .var-main .prd-new 					{ text-align: center;}
 	#main-r .var-main .prd-new:nth-child(2)     { width: 100%;}
 }
@@ -577,6 +583,12 @@ box-shadow: 0px 4px 0px #010101 inset;
 @media (max-width: 500px) {
 		#bestprice .slick-prev						{ left: 0!important; top:-60px; right: auto;}
 		#bestprice .slick-next 						{ left: 50px!important; top:-60px; right: auto;}
+
+
+		#bestproduct .slick-prev 					{ left: 0!important; top:45px; right: auto;}
+		#bestproduct .slick-next 					{ left: 50px!important; top:45px; right: auto;}
+
+
 		#bestprice.company-page .slick-prev 		{ top: 45px;}
 		#bestprice.company-page .slick-next  		{ top: 45px;}
 		#bestproduct li.clumn-best 					{ height: auto;}
